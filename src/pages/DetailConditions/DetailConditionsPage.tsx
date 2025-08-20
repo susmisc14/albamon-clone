@@ -231,7 +231,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   style={{
                     padding: "8px 12px",
                     border: "1px solid #e8e8e8",
-                    borderRadius: "4px",
+                    borderRadius: "30px",
                     backgroundColor: "white",
                     color: "#6a6a6a",
                     fontSize: "13px",
@@ -278,7 +278,7 @@ export function DetailConditionsPage(): React.JSX.Element {
             <div
               style={{
                 display: "flex",
-                borderRadius: "4px",
+                borderRadius: "8px",
                 overflow: "hidden",
                 border: "1px solid #e8e8e8",
               }}
@@ -307,7 +307,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   style={{
                     padding: "8px 12px",
                     border: "1px solid #ff501b",
-                    borderRadius: "0",
+                    borderRadius: "8px 0 0 8px",
                     backgroundColor: "white",
                     color: "#ff501b",
                     fontSize: "13px",
@@ -344,7 +344,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   style={{
                     padding: "8px 12px",
                     border: "1px solid #e8e8e8",
-                    borderRadius: "0",
+                    borderRadius: "0 8px 8px 0",
                     backgroundColor: "white",
                     color: "#6a6a6a",
                     fontSize: "13px",
@@ -402,7 +402,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   style={{
                     padding: "8px 12px",
                     border: "1px solid #e8e8e8",
-                    borderRadius: "4px",
+                    borderRadius: "30px",
                     backgroundColor: "white",
                     color: "#6a6a6a",
                     fontSize: "13px",
@@ -470,7 +470,7 @@ export function DetailConditionsPage(): React.JSX.Element {
             <div
               style={{
                 display: "flex",
-                borderRadius: "4px",
+                borderRadius: "8px",
                 overflow: "hidden",
                 border: "1px solid #e8e8e8",
               }}
@@ -499,7 +499,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   style={{
                     padding: "8px 12px",
                     border: "1px solid #ff501b",
-                    borderRadius: "0",
+                    borderRadius: "8px 0 0 8px",
                     backgroundColor: "white",
                     color: "#ff501b",
                     fontSize: "13px",
@@ -536,7 +536,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   style={{
                     padding: "8px 12px",
                     border: "1px solid #e8e8e8",
-                    borderRadius: "0",
+                    borderRadius: "0 8px 8px 0",
                     backgroundColor: "white",
                     color: "#6a6a6a",
                     fontSize: "13px",
@@ -593,7 +593,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   style={{
                     padding: "8px 12px",
                     border: "1px solid #e8e8e8",
-                    borderRadius: "4px",
+                    borderRadius: "30px",
                     backgroundColor: "white",
                     color: "#6a6a6a",
                     fontSize: "13px",
@@ -660,7 +660,7 @@ export function DetailConditionsPage(): React.JSX.Element {
             <div
               style={{
                 display: "flex",
-                borderRadius: "4px",
+                borderRadius: "8px",
                 overflow: "hidden",
                 border: "1px solid #e8e8e8",
               }}
@@ -687,7 +687,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   style={{
                     padding: "8px 12px",
                     border: "1px solid #e8e8e8",
-                    borderRadius: "0",
+                    borderRadius: "8px 0 0 8px",
                     backgroundColor: "white",
                     color: "#6a6a6a",
                     fontSize: "13px",
@@ -723,7 +723,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   style={{
                     padding: "8px 12px",
                     border: "1px solid #e8e8e8",
-                    borderRadius: "0",
+                    borderRadius: "0 8px 8px 0",
                     backgroundColor: "white",
                     color: "#6a6a6a",
                     fontSize: "13px",
@@ -933,7 +933,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   style={{
                     padding: "8px 12px",
                     border: "1px solid #e8e8e8",
-                    borderRadius: "4px",
+                    borderRadius: "30px",
                     backgroundColor: "white",
                     color: "#6a6a6a",
                     fontSize: "13px",
