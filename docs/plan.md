@@ -221,6 +221,7 @@ ts-node tools/extract.ts
 - 리스트 셀의 최소 높이와 줄 수 제한(line-clamp)
 
 #### 3.1) 1차 추출 결과 요약(데스크톱 기준 1512×982 @2x)
+
 - 폰트
   - 기본: Pretendard Variable (가변, `font-weight: 45 920`, `font-display: swap`)
     - 서브셋 woff2 사용 경로 예시: `https://mc.albamon.kr/etc/msa/assets/webfonts/subset/PretendardVariable.subset.*.woff2`
@@ -244,6 +245,7 @@ ts-node tools/extract.ts
   - `/_next/static/css/*.css` 다수. 모두 수집 대상으로 처리(한 파일은 일시 실패 가능성 있어 재시도 처리).
 
 액션 아이템
+
 - Pretendard Variable 및 아이콘 웹폰트 로컬 캐시/서빙 옵션 준비
 - CSS 토큰화에 위 색상/간격/라운딩 반영
 - Toggle/Tabs/헤더 등 고정 높이/간격 수치화를 컴포넌트 설계에 반영
@@ -313,6 +315,7 @@ test("DetailConditions pixel-perfect", async ({}) => {
 각 컴포넌트의 높이, 내부 패딩, 간격, 라운딩 값은 추출 CSS와 스크린샷 기준으로 수치화.
 
 ### 4.1) 컴포넌트별 초기 수치(1차)
+
 - Header
   - padding: 24px 20px
   - background: var(--color-surface)
