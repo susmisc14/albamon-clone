@@ -1,3 +1,26 @@
 .bmad-core/
 
+# Node/Vite artifacts
+node_modules/
+dist/
+.artifacts/
+
+# OS/Editor
+.DS_Store
+.cursor/
+.idea/
+.vscode/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# TypeScript
+tsconfig.tsbuildinfo
+
+# Env
+.env*
 
