@@ -220,6 +220,34 @@ ts-node tools/extract.ts
 - 칩/버튼/바텀시트의 상태 전이와 높이
 - 리스트 셀의 최소 높이와 줄 수 제한(line-clamp)
 
+#### 3.1) 1차 추출 결과 요약(데스크톱 기준 1512×982 @2x)
+- 폰트
+  - 기본: Pretendard Variable (가변, `font-weight: 45 920`, `font-display: swap`)
+    - 서브셋 woff2 사용 경로 예시: `https://mc.albamon.kr/etc/msa/assets/webfonts/subset/PretendardVariable.subset.*.woff2`
+  - 아이콘 폰트: `icons`(`icons_v1.8.7.woff`), 일부 화면에서 FontAwesome v4.7.0 사용 흔적
+- 색상(발견된 주요 값)
+  - 프라이머리: `#ff501b`
+  - 배경 라이트: `#f8f8f8`
+  - 본문/보조: `#6a6a6a`, `#9e9e9e`
+  - 경계선: `#e8e8e8`, `#d2d2d2`
+- 간격/라운딩(패턴)
+  - 패딩/마진: 8, 12, 16, 20, 24, 32px 빈도 높음
+  - 라운딩: 4px, 8px
+  - 라인-헤이트: 140% 사용 예시
+  - 레터-스페이싱: `-0.75px` 사용 예시(설명/서브텍스트)
+- 레이아웃/컴포넌트 힌트
+  - DetailConditions 헤더: 패딩 `24px 20px`, 배경 `#f8f8f8`, 본문 `#6a6a6a`
+  - Tabs: 버튼 영역 보더 `1px solid #e8e8e8`, 스크롤형 버튼 내 패딩/간격 수치 존재(11px/4px 등)
+  - Toggle: 기본 높이 32px, 라지 48px, 탭 버튼 변형 44px, 스몰 원형 34px 등 변형별 고정 높이
+  - ApplyInfo/TitleForm/Complete 등의 템플릿 스타일에서 토큰 일관성 재확인(프라이머리 하이라이트, 경계선, 간격)
+- Next.js 정적 CSS 링크 확인
+  - `/_next/static/css/*.css` 다수. 모두 수집 대상으로 처리(한 파일은 일시 실패 가능성 있어 재시도 처리).
+
+액션 아이템
+- Pretendard Variable 및 아이콘 웹폰트 로컬 캐시/서빙 옵션 준비
+- CSS 토큰화에 위 색상/간격/라운딩 반영
+- Toggle/Tabs/헤더 등 고정 높이/간격 수치화를 컴포넌트 설계에 반영
+
 ### 4) 클론 UI 구현 (React + CSS Modules)
 
 - 컴포넌트 분해 원칙: 원본 DOM 구조를 우선 존중. 의미 단위로만 최소한의 래핑.
@@ -284,6 +312,21 @@ test("DetailConditions pixel-perfect", async ({}) => {
 
 각 컴포넌트의 높이, 내부 패딩, 간격, 라운딩 값은 추출 CSS와 스크린샷 기준으로 수치화.
 
+### 4.1) 컴포넌트별 초기 수치(1차)
+- Header
+  - padding: 24px 20px
+  - background: var(--color-surface)
+  - text: var(--color-text-muted)
+- Tabs
+  - border-bottom: 1px solid var(--color-border)
+  - buttons inner padding: 11px 4px
+  - scroll margin between slides: 8px
+- Toggle
+  - base height: 32px
+  - large height: 48px
+  - tabButton variant height: 44px
+  - rounded-primary-small min-width: 36px, height: 34px
+
 ---
 
 ## CSS 모듈 규칙 및 토큰 예시
@@ -292,14 +335,18 @@ test("DetailConditions pixel-perfect", async ({}) => {
 
 ```css
 :root {
-  /* 색상 */
+  /* 색상 (1차 추출 기반 값) */
   --color-bg: #ffffff;
+  --color-surface: #f8f8f8;
   --color-fg: #111111;
-  --color-muted: #6b7280;
-  --color-primary: #ff6a21; /* 실제 추출값으로 교체 */
+  --color-text-muted: #6a6a6a;
+  --color-text-secondary: #9e9e9e;
+  --color-border: #e8e8e8;
+  --color-border-strong: #d2d2d2;
+  --color-primary: #ff501b;
 
   /* 타이포 */
-  --font-family-base: "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont,
+  --font-family-base: "Pretendard Variable", system-ui, -apple-system, BlinkMacSystemFont,
     "Apple SD Gothic Neo", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
   --font-size-xs: 12px;
@@ -307,17 +354,18 @@ test("DetailConditions pixel-perfect", async ({}) => {
   --font-size-md: 14px;
   --font-size-lg: 16px;
   --line-height-tight: 1.2;
-  --line-height-base: 1.4;
+  --line-height-base: 1.4; /* 140% 근사 */
+  --letter-spacing-tight: -0.75px; /* 설명/서브텍스트에 관찰됨 */
 
-  /* 간격 */
-  --space-2: 2px;
-  --space-4: 4px;
-  --space-6: 6px;
+  /* 간격/라운딩 (관찰된 빈도) */
   --space-8: 8px;
   --space-12: 12px;
   --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --radius-4: 4px;
   --radius-8: 8px;
-  --radius-12: 12px;
 }
 ```
 
