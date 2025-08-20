@@ -23,6 +23,7 @@ test-results/
 # Misc
 .env*
 .cache/
+extracted/
 .bmad-core/
 
 # Node/Vite artifacts
