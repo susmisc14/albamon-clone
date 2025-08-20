@@ -212,6 +212,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   alignItems: "center",
                   cursor: "pointer",
                   position: "relative",
+                  height: "34px",
                 }}
               >
                 <input
@@ -226,13 +227,17 @@ export function DetailConditionsPage(): React.JSX.Element {
                 <span
                   style={{
                     padding: "8px 12px",
-                    border: "1px solid #e8e8e8",
+                    border: "1px solid #f8f8f8",
                     borderRadius: "30px",
-                    backgroundColor: "white",
+                    backgroundColor: "#f8f8f8",
                     color: "#6a6a6a",
                     fontSize: "13px",
                     cursor: "pointer",
                     transition: "all 0.2s ease",
+                    height: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   {text}
@@ -276,6 +281,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                 borderRadius: "8px",
                 overflow: "hidden",
                 border: "1px solid #e8e8e8",
+                height: "44px",
               }}
             >
               <label
@@ -285,6 +291,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   cursor: "pointer",
                   position: "relative",
                   flex: 1,
+                  height: "100%",
                 }}
               >
                 <input
@@ -309,8 +316,11 @@ export function DetailConditionsPage(): React.JSX.Element {
                     cursor: "pointer",
                     transition: "all 0.2s ease",
                     width: "100%",
+                    height: "100%",
                     textAlign: "center",
-                    display: "block",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   목록에서 선택
@@ -323,6 +333,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   cursor: "pointer",
                   position: "relative",
                   flex: 1,
+                  height: "100%",
                 }}
               >
                 <input
@@ -340,14 +351,17 @@ export function DetailConditionsPage(): React.JSX.Element {
                     padding: "8px 12px",
                     border: "1px solid #e8e8e8",
                     borderRadius: "0 8px 8px 0",
-                    backgroundColor: "white",
+                    backgroundColor: "transparent",
                     color: "#6a6a6a",
                     fontSize: "13px",
                     cursor: "pointer",
                     transition: "all 0.2s ease",
                     width: "100%",
+                    height: "100%",
                     textAlign: "center",
-                    display: "block",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   직접 선택
@@ -382,6 +396,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   alignItems: "center",
                   cursor: "pointer",
                   position: "relative",
+                  height: "34px",
                 }}
               >
                 <input
@@ -396,13 +411,17 @@ export function DetailConditionsPage(): React.JSX.Element {
                 <span
                   style={{
                     padding: "8px 12px",
-                    border: "1px solid #e8e8e8",
+                    border: "1px solid #f8f8f8",
                     borderRadius: "30px",
-                    backgroundColor: "white",
+                    backgroundColor: "#f8f8f8",
                     color: "#6a6a6a",
                     fontSize: "13px",
                     cursor: "pointer",
                     transition: "all 0.2s ease",
+                    height: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   {text}
@@ -467,6 +486,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                 borderRadius: "8px",
                 overflow: "hidden",
                 border: "1px solid #e8e8e8",
+                height: "44px",
               }}
             >
               <label
@@ -476,6 +496,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   cursor: "pointer",
                   position: "relative",
                   flex: 1,
+                  height: "100%",
                 }}
               >
                 <input
@@ -500,8 +521,11 @@ export function DetailConditionsPage(): React.JSX.Element {
                     cursor: "pointer",
                     transition: "all 0.2s ease",
                     width: "100%",
+                    height: "100%",
                     textAlign: "center",
-                    display: "block",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   목록에서 선택
@@ -514,6 +538,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   cursor: "pointer",
                   position: "relative",
                   flex: 1,
+                  height: "100%",
                 }}
               >
                 <input
@@ -531,14 +556,17 @@ export function DetailConditionsPage(): React.JSX.Element {
                     padding: "8px 12px",
                     border: "1px solid #e8e8e8",
                     borderRadius: "0 8px 8px 0",
-                    backgroundColor: "white",
+                    backgroundColor: "transparent",
                     color: "#6a6a6a",
                     fontSize: "13px",
                     cursor: "pointer",
                     transition: "all 0.2s ease",
                     width: "100%",
+                    height: "100%",
                     textAlign: "center",
-                    display: "block",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   직접 선택
@@ -572,6 +600,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   alignItems: "center",
                   cursor: "pointer",
                   position: "relative",
+                  height: "34px",
                 }}
               >
                 <input
@@ -586,13 +615,17 @@ export function DetailConditionsPage(): React.JSX.Element {
                 <span
                   style={{
                     padding: "8px 12px",
-                    border: "1px solid #e8e8e8",
+                    border: "1px solid #f8f8f8",
                     borderRadius: "30px",
-                    backgroundColor: "white",
+                    backgroundColor: "#f8f8f8",
                     color: "#6a6a6a",
                     fontSize: "13px",
                     cursor: "pointer",
                     transition: "all 0.2s ease",
+                    height: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   {text}
@@ -656,6 +689,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                 borderRadius: "8px",
                 overflow: "hidden",
                 border: "1px solid #e8e8e8",
+                height: "44px",
               }}
             >
               <label
@@ -665,6 +699,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   cursor: "pointer",
                   position: "relative",
                   flex: 1,
+                  height: "100%",
                 }}
               >
                 <input
@@ -681,14 +716,17 @@ export function DetailConditionsPage(): React.JSX.Element {
                     padding: "8px 12px",
                     border: "1px solid #e8e8e8",
                     borderRadius: "8px 0 0 8px",
-                    backgroundColor: "white",
+                    backgroundColor: "transparent",
                     color: "#6a6a6a",
                     fontSize: "13px",
                     cursor: "pointer",
                     transition: "all 0.2s ease",
                     width: "100%",
+                    height: "100%",
                     textAlign: "center",
-                    display: "block",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   남자
@@ -701,6 +739,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   cursor: "pointer",
                   position: "relative",
                   flex: 1,
+                  height: "100%",
                 }}
               >
                 <input
@@ -717,14 +756,17 @@ export function DetailConditionsPage(): React.JSX.Element {
                     padding: "8px 12px",
                     border: "1px solid #e8e8e8",
                     borderRadius: "0 8px 8px 0",
-                    backgroundColor: "white",
+                    backgroundColor: "transparent",
                     color: "#6a6a6a",
                     fontSize: "13px",
                     cursor: "pointer",
                     transition: "all 0.2s ease",
                     width: "100%",
+                    height: "100%",
                     textAlign: "center",
-                    display: "block",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   여자
@@ -909,6 +951,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   alignItems: "center",
                   cursor: "pointer",
                   position: "relative",
+                  height: "34px",
                 }}
               >
                 <input
@@ -923,13 +966,17 @@ export function DetailConditionsPage(): React.JSX.Element {
                 <span
                   style={{
                     padding: "8px 12px",
-                    border: "1px solid #e8e8e8",
+                    border: "1px solid #f8f8f8",
                     borderRadius: "30px",
-                    backgroundColor: "white",
+                    backgroundColor: "#f8f8f8",
                     color: "#6a6a6a",
                     fontSize: "13px",
                     cursor: "pointer",
                     transition: "all 0.2s ease",
+                    height: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   {text}
