@@ -278,9 +278,6 @@ export function DetailConditionsPage(): React.JSX.Element {
             <div
               style={{
                 display: "flex",
-                borderRadius: "8px",
-                overflow: "hidden",
-                border: "1px solid #e8e8e8",
                 height: "44px",
               }}
             >
@@ -483,9 +480,6 @@ export function DetailConditionsPage(): React.JSX.Element {
             <div
               style={{
                 display: "flex",
-                borderRadius: "8px",
-                overflow: "hidden",
-                border: "1px solid #e8e8e8",
                 height: "44px",
               }}
             >
@@ -686,9 +680,6 @@ export function DetailConditionsPage(): React.JSX.Element {
             <div
               style={{
                 display: "flex",
-                borderRadius: "8px",
-                overflow: "hidden",
-                border: "1px solid #e8e8e8",
                 height: "44px",
               }}
             >
