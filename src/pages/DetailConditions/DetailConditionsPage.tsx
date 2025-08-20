@@ -62,7 +62,6 @@ export function DetailConditionsPage(): React.JSX.Element {
           fontSize: "13px",
           color: "#9e9e9e",
           backgroundColor: "#f8f8f8",
-          borderBottom: "1px solid #e8e8e8",
           lineHeight: "1.4",
           letterSpacing: "-0.75px",
         }}
@@ -75,7 +74,6 @@ export function DetailConditionsPage(): React.JSX.Element {
         <div
           style={{
             padding: "24px 0",
-            borderBottom: "1px solid #e8e8e8",
             position: "relative",
           }}
         >
@@ -125,7 +123,6 @@ export function DetailConditionsPage(): React.JSX.Element {
         <div
           style={{
             padding: "24px 0",
-            borderBottom: "1px solid #e8e8e8",
             position: "relative",
           }}
         >
@@ -175,7 +172,6 @@ export function DetailConditionsPage(): React.JSX.Element {
         <div
           style={{
             padding: "24px 0",
-            borderBottom: "1px solid #e8e8e8",
             position: "relative",
           }}
         >
@@ -250,7 +246,6 @@ export function DetailConditionsPage(): React.JSX.Element {
         <div
           style={{
             padding: "24px 0",
-            borderBottom: "1px solid #e8e8e8",
             position: "relative",
           }}
         >
@@ -442,7 +437,6 @@ export function DetailConditionsPage(): React.JSX.Element {
         <div
           style={{
             padding: "24px 0",
-            borderBottom: "1px solid #e8e8e8",
             position: "relative",
           }}
         >
@@ -633,7 +627,6 @@ export function DetailConditionsPage(): React.JSX.Element {
         <div
           style={{
             padding: "24px 0",
-            borderBottom: "1px solid #e8e8e8",
             position: "relative",
           }}
         >
@@ -766,7 +759,6 @@ export function DetailConditionsPage(): React.JSX.Element {
         <div
           style={{
             padding: "24px 0",
-            borderBottom: "1px solid #e8e8e8",
             position: "relative",
           }}
         >
@@ -877,7 +869,6 @@ export function DetailConditionsPage(): React.JSX.Element {
         <div
           style={{
             padding: "24px 0",
-            borderBottom: "1px solid #e8e8e8",
             position: "relative",
           }}
         >
@@ -952,7 +943,6 @@ export function DetailConditionsPage(): React.JSX.Element {
         <div
           style={{
             padding: "24px 0",
-            borderBottom: "1px solid #e8e8e8",
             position: "relative",
           }}
         >
