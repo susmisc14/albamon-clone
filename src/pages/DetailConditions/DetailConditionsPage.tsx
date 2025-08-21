@@ -1009,8 +1009,8 @@ export function DetailConditionsPage(): React.JSX.Element {
           >
             여러 개의 키워드를 포함하거나 제외할 수 있습니다.
           </p>
-          <div style={{ display: "flex", gap: "12px", marginBottom: "16px" }}>
-            <div style={{ flex: 1 }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+            <div>
               <div
                 style={{
                   display: "flex",
@@ -1045,7 +1045,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                 }}
               />
             </div>
-            <div style={{ flex: 1 }}>
+            <div>
               <div
                 style={{
                   display: "flex",
