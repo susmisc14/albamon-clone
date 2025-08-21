@@ -226,15 +226,16 @@ export function DetailConditionsPage(): React.JSX.Element {
                 />
                 <span
                   style={{
-                    padding: "8px 12px",
+                    padding: "6px 10px",
                     border: "1px solid #f8f8f8",
-                    borderRadius: "30px",
+                    borderRadius: "4px",
                     backgroundColor: "#f8f8f8",
                     color: "#6a6a6a",
-                    fontSize: "13px",
+                    fontSize: "14px",
                     cursor: "pointer",
                     transition: "all 0.2s ease",
                     height: "100%",
+                    boxSizing: "border-box",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -321,47 +322,47 @@ export function DetailConditionsPage(): React.JSX.Element {
                 >
                   목록에서 선택
                 </span>
-                </label>
-                <label
+              </label>
+              <label
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  cursor: "pointer",
+                  position: "relative",
+                  flex: 1,
+                  height: "100%",
+                }}
+              >
+                <input
+                  type="radio"
+                  name="workDay"
                   style={{
-                    display: "inline-flex",
-                    alignItems: "center",
+                    position: "absolute",
+                    opacity: 0,
+                    width: 0,
+                    height: 0,
+                  }}
+                />
+                <span
+                  style={{
+                    border: "1px solid #e8e8e8",
+                    borderRadius: "0 8px 8px 0",
+                    backgroundColor: "transparent",
+                    color: "#6a6a6a",
+                    fontSize: "13px",
                     cursor: "pointer",
-                    position: "relative",
-                    flex: 1,
+                    transition: "all 0.2s ease",
+                    width: "100%",
                     height: "100%",
+                    textAlign: "center",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
-                  <input
-                    type="radio"
-                    name="workDay"
-                    style={{
-                      position: "absolute",
-                      opacity: 0,
-                      width: 0,
-                      height: 0,
-                    }}
-                  />
-                  <span
-                    style={{
-                      border: "1px solid #e8e8e8",
-                      borderRadius: "0 8px 8px 0",
-                      backgroundColor: "transparent",
-                      color: "#6a6a6a",
-                      fontSize: "13px",
-                      cursor: "pointer",
-                      transition: "all 0.2s ease",
-                      width: "100%",
-                      height: "100%",
-                      textAlign: "center",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    직접 선택
-                  </span>
-                </label>
+                  직접 선택
+                </span>
+              </label>
             </div>
           </div>
           <div
@@ -405,15 +406,16 @@ export function DetailConditionsPage(): React.JSX.Element {
                 />
                 <span
                   style={{
-                    padding: "8px 12px",
+                    padding: "6px 10px",
                     border: "1px solid #f8f8f8",
-                    borderRadius: "30px",
+                    borderRadius: "4px",
                     backgroundColor: "#f8f8f8",
                     color: "#6a6a6a",
-                    fontSize: "13px",
+                    fontSize: "14px",
                     cursor: "pointer",
                     transition: "all 0.2s ease",
                     height: "100%",
+                    boxSizing: "border-box",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -604,15 +606,16 @@ export function DetailConditionsPage(): React.JSX.Element {
                 />
                 <span
                   style={{
-                    padding: "8px 12px",
+                    padding: "6px 10px",
                     border: "1px solid #f8f8f8",
-                    borderRadius: "30px",
+                    borderRadius: "4px",
                     backgroundColor: "#f8f8f8",
                     color: "#6a6a6a",
-                    fontSize: "13px",
+                    fontSize: "14px",
                     cursor: "pointer",
                     transition: "all 0.2s ease",
                     height: "100%",
+                    boxSizing: "border-box",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -950,15 +953,16 @@ export function DetailConditionsPage(): React.JSX.Element {
                 />
                 <span
                   style={{
-                    padding: "8px 12px",
+                    padding: "6px 10px",
                     border: "1px solid #f8f8f8",
-                    borderRadius: "30px",
+                    borderRadius: "4px",
                     backgroundColor: "#f8f8f8",
                     color: "#6a6a6a",
-                    fontSize: "13px",
+                    fontSize: "14px",
                     cursor: "pointer",
                     transition: "all 0.2s ease",
                     height: "100%",
+                    boxSizing: "border-box",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
