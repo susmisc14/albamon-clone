@@ -3,7 +3,12 @@ import React from "react";
 export function DetailConditionsPage(): React.JSX.Element {
   return (
     <div
-      style={{ fontFamily: "system-ui", maxWidth: "1512px", margin: "0 auto" }}
+      style={{
+        fontFamily:
+          'Pretendard Variable, system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+        maxWidth: "1512px",
+        margin: "0 auto",
+      }}
     >
       {/* Header */}
       <div style={{ background: "#fff", borderBottom: "1px solid #e8e8e8" }}>
@@ -92,7 +97,8 @@ export function DetailConditionsPage(): React.JSX.Element {
               style={{
                 margin: 0,
                 fontSize: "18px",
-                fontWeight: 600,
+                fontWeight: 700,
+                lineHeight: "28px",
                 color: "#111111",
               }}
             >
@@ -141,7 +147,8 @@ export function DetailConditionsPage(): React.JSX.Element {
               style={{
                 margin: 0,
                 fontSize: "18px",
-                fontWeight: 600,
+                fontWeight: 700,
+                lineHeight: "28px",
                 color: "#111111",
               }}
             >
@@ -190,7 +197,8 @@ export function DetailConditionsPage(): React.JSX.Element {
               style={{
                 margin: 0,
                 fontSize: "18px",
-                fontWeight: 600,
+                fontWeight: 700,
+                lineHeight: "28px",
                 color: "#111111",
               }}
             >
@@ -270,7 +278,8 @@ export function DetailConditionsPage(): React.JSX.Element {
               style={{
                 margin: 0,
                 fontSize: "18px",
-                fontWeight: 600,
+                fontWeight: 700,
+                lineHeight: "28px",
                 color: "#111111",
               }}
             >
@@ -471,7 +480,8 @@ export function DetailConditionsPage(): React.JSX.Element {
               style={{
                 margin: 0,
                 fontSize: "18px",
-                fontWeight: 600,
+                fontWeight: 700,
+                lineHeight: "28px",
                 color: "#111111",
               }}
             >
@@ -671,7 +681,8 @@ export function DetailConditionsPage(): React.JSX.Element {
               style={{
                 margin: 0,
                 fontSize: "18px",
-                fontWeight: 600,
+                fontWeight: 700,
+                lineHeight: "28px",
                 color: "#111111",
               }}
             >
@@ -807,7 +818,8 @@ export function DetailConditionsPage(): React.JSX.Element {
               style={{
                 margin: 0,
                 fontSize: "18px",
-                fontWeight: 600,
+                fontWeight: 700,
+                lineHeight: "28px",
                 color: "#111111",
               }}
             >
@@ -917,7 +929,8 @@ export function DetailConditionsPage(): React.JSX.Element {
               style={{
                 margin: 0,
                 fontSize: "18px",
-                fontWeight: 600,
+                fontWeight: 700,
+                lineHeight: "28px",
                 color: "#111111",
               }}
             >
@@ -997,7 +1010,8 @@ export function DetailConditionsPage(): React.JSX.Element {
               style={{
                 margin: 0,
                 fontSize: "18px",
-                fontWeight: 600,
+                fontWeight: 700,
+                lineHeight: "28px",
                 color: "#111111",
               }}
             >
@@ -1009,7 +1023,9 @@ export function DetailConditionsPage(): React.JSX.Element {
           >
             여러 개의 키워드를 포함하거나 제외할 수 있습니다.
           </p>
-          <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+          <div
+            style={{ display: "flex", flexDirection: "column", gap: "16px" }}
+          >
             <div>
               <div
                 style={{
@@ -1021,9 +1037,11 @@ export function DetailConditionsPage(): React.JSX.Element {
               >
                 <label
                   style={{
-                    fontSize: "13px",
+                    fontSize: "16px",
+                    lineHeight: "22px",
+                    letterSpacing: "-0.2px",
                     color: "#111111",
-                    fontWeight: 500,
+                    fontWeight: 800,
                   }}
                 >
                   포함
@@ -1056,9 +1074,11 @@ export function DetailConditionsPage(): React.JSX.Element {
               >
                 <label
                   style={{
-                    fontSize: "13px",
+                    fontSize: "16px",
+                    lineHeight: "22px",
+                    letterSpacing: "-0.2px",
                     color: "#111111",
-                    fontWeight: 500,
+                    fontWeight: 800,
                   }}
                 >
                   제외
