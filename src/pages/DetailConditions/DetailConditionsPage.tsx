@@ -103,10 +103,10 @@ export function DetailConditionsPage(): React.JSX.Element {
           <button
             style={{
               padding: "12px 16px",
-              border: "1px solid #ff501b",
+              border: "1px solid #d2d2d2",
               borderRadius: "8px",
-              backgroundColor: "white",
-              color: "#ff501b",
+              backgroundColor: "#f8f8f8",
+              color: "#6a6a6a",
               fontSize: "13px",
               fontWeight: 500,
               cursor: "pointer",
@@ -152,10 +152,10 @@ export function DetailConditionsPage(): React.JSX.Element {
           <button
             style={{
               padding: "12px 16px",
-              border: "1px solid #ff501b",
+              border: "1px solid #d2d2d2",
               borderRadius: "8px",
-              backgroundColor: "white",
-              color: "#ff501b",
+              backgroundColor: "#f8f8f8",
+              color: "#6a6a6a",
               fontSize: "13px",
               fontWeight: 500,
               cursor: "pointer",
