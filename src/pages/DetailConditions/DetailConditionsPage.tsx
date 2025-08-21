@@ -15,29 +15,31 @@ export function DetailConditionsPage(): React.JSX.Element {
             padding: "20px",
           }}
         >
-          <button
-            style={{
-              background: "none",
-              border: "none",
-              cursor: "pointer",
-              fontSize: "14px",
-              color: "#6a6a6a",
-              padding: "8px",
-              borderRadius: "8px",
-            }}
-          >
-            ←
-          </button>
-          <h1
-            style={{
-              margin: 0,
-              fontSize: "16px",
-              fontWeight: 600,
-              color: "#111111",
-            }}
-          >
-            검색조건설정
-          </h1>
+          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+            <button
+              style={{
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                fontSize: "14px",
+                color: "#6a6a6a",
+                padding: "8px",
+                borderRadius: "8px",
+              }}
+            >
+              ←
+            </button>
+            <h1
+              style={{
+                margin: 0,
+                fontSize: "16px",
+                fontWeight: 600,
+                color: "#111111",
+              }}
+            >
+              검색조건설정
+            </h1>
+          </div>
           <button
             style={{
               background: "none",
@@ -64,6 +66,7 @@ export function DetailConditionsPage(): React.JSX.Element {
           backgroundColor: "#f8f8f8",
           lineHeight: "1.4",
           letterSpacing: "-0.75px",
+          textAlign: "center",
         }}
       >
         모든 채용메뉴에 공통 반영됩니다.
