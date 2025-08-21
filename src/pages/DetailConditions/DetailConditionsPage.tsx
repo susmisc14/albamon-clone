@@ -17,7 +17,8 @@ export function DetailConditionsPage(): React.JSX.Element {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            padding: "20px",
+            padding: "0 20px",
+            height: "56px",
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
@@ -51,7 +52,7 @@ export function DetailConditionsPage(): React.JSX.Element {
               border: "none",
               cursor: "pointer",
               fontSize: "14px",
-              color: "#ff501b",
+              color: "#6a6a6a",
               fontWeight: 500,
               padding: "8px",
               borderRadius: "8px",
@@ -65,7 +66,7 @@ export function DetailConditionsPage(): React.JSX.Element {
       {/* Description */}
       <div
         style={{
-          padding: "16px 20px",
+          padding: "24px 20px",
           fontSize: "13px",
           color: "#9e9e9e",
           backgroundColor: "#f8f8f8",
@@ -77,7 +78,7 @@ export function DetailConditionsPage(): React.JSX.Element {
         모든 채용메뉴에 공통 반영됩니다.
       </div>
 
-      <div style={{ padding: "0 20px" }}>
+      <div style={{ padding: "0 20px 88px" }}>
         {/* 근무지역 */}
         <div
           style={{
@@ -104,16 +105,18 @@ export function DetailConditionsPage(): React.JSX.Element {
             >
               근무지역
             </h3>
-            <div style={{ fontSize: "12px", color: "#9e9e9e" }}>0/10</div>
+            <div style={{ fontSize: "12px", color: "#9e9e9e" }}>
+              <em style={{ color: "#ff501b", fontStyle: "normal" }}>0</em>/10
+            </div>
           </div>
           <button
             style={{
               padding: "12px 16px",
               border: "1px solid #d2d2d2",
               borderRadius: "8px",
-              backgroundColor: "#f8f8f8",
-              color: "#6a6a6a",
-              fontSize: "13px",
+              backgroundColor: "#fff",
+              color: "#171717",
+              fontSize: "14px",
               fontWeight: 500,
               cursor: "pointer",
               display: "flex",
@@ -154,16 +157,18 @@ export function DetailConditionsPage(): React.JSX.Element {
             >
               업직종
             </h3>
-            <div style={{ fontSize: "12px", color: "#9e9e9e" }}>0/10</div>
+            <div style={{ fontSize: "12px", color: "#9e9e9e" }}>
+              <em style={{ color: "#ff501b", fontStyle: "normal" }}>0</em>/10
+            </div>
           </div>
           <button
             style={{
               padding: "12px 16px",
               border: "1px solid #d2d2d2",
               borderRadius: "8px",
-              backgroundColor: "#f8f8f8",
-              color: "#6a6a6a",
-              fontSize: "13px",
+              backgroundColor: "#fff",
+              color: "#171717",
+              fontSize: "14px",
               fontWeight: 500,
               cursor: "pointer",
               display: "flex",
@@ -204,7 +209,9 @@ export function DetailConditionsPage(): React.JSX.Element {
             >
               근무기간
             </h3>
-            <div style={{ fontSize: "12px", color: "#9e9e9e" }}>0/6</div>
+            <div style={{ fontSize: "12px", color: "#9e9e9e" }}>
+              <em style={{ color: "#ff501b", fontStyle: "normal" }}>0</em>/6
+            </div>
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
             {[
@@ -285,9 +292,17 @@ export function DetailConditionsPage(): React.JSX.Element {
             >
               근무요일
             </h3>
-            <div style={{ fontSize: "12px", color: "#9e9e9e" }}>0/3</div>
+            <div style={{ fontSize: "12px", color: "#9e9e9e" }}>
+              <em style={{ color: "#ff501b", fontStyle: "normal" }}>0</em>/3
+            </div>
           </div>
-          <div style={{ marginBottom: "16px" }}>
+          <div
+            style={{
+              marginBottom: "16px",
+              backgroundColor: "#f8f8f8",
+              borderRadius: "8px",
+            }}
+          >
             <div
               style={{
                 display: "flex",
@@ -318,7 +333,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                 <span
                   style={{
                     border: "1px solid #ff501b",
-                    borderRadius: "8px 0 0 8px",
+                    borderRadius: "8px",
                     backgroundColor: "white",
                     color: "#ff501b",
                     fontSize: "13px",
@@ -357,8 +372,8 @@ export function DetailConditionsPage(): React.JSX.Element {
                 />
                 <span
                   style={{
-                    border: "1px solid #e8e8e8",
-                    borderRadius: "0 8px 8px 0",
+                    border: "none",
+                    borderRadius: "8px",
                     backgroundColor: "transparent",
                     color: "#6a6a6a",
                     fontSize: "13px",
@@ -487,9 +502,17 @@ export function DetailConditionsPage(): React.JSX.Element {
             >
               근무시간
             </h3>
-            <div style={{ fontSize: "12px", color: "#9e9e9e" }}>0/3</div>
+            <div style={{ fontSize: "12px", color: "#9e9e9e" }}>
+              <em style={{ color: "#ff501b", fontStyle: "normal" }}>0</em>/3
+            </div>
           </div>
-          <div style={{ marginBottom: "16px" }}>
+          <div
+            style={{
+              marginBottom: "16px",
+              backgroundColor: "#f8f8f8",
+              borderRadius: "8px",
+            }}
+          >
             <div
               style={{
                 display: "flex",
@@ -520,7 +543,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                 <span
                   style={{
                     border: "1px solid #ff501b",
-                    borderRadius: "8px 0 0 8px",
+                    borderRadius: "8px",
                     backgroundColor: "white",
                     color: "#ff501b",
                     fontSize: "13px",
@@ -559,8 +582,8 @@ export function DetailConditionsPage(): React.JSX.Element {
                 />
                 <span
                   style={{
-                    border: "1px solid #e8e8e8",
-                    borderRadius: "0 8px 8px 0",
+                    border: "none",
+                    borderRadius: "8px",
                     backgroundColor: "transparent",
                     color: "#6a6a6a",
                     fontSize: "13px",
@@ -689,7 +712,13 @@ export function DetailConditionsPage(): React.JSX.Element {
               성별
             </h3>
           </div>
-          <div style={{ marginBottom: "16px" }}>
+          <div
+            style={{
+              marginBottom: "16px",
+              backgroundColor: "#f8f8f8",
+              borderRadius: "8px",
+            }}
+          >
             <div
               style={{
                 display: "flex",
@@ -717,8 +746,8 @@ export function DetailConditionsPage(): React.JSX.Element {
                 />
                 <span
                   style={{
-                    border: "1px solid #e8e8e8",
-                    borderRadius: "8px 0 0 8px",
+                    border: "none",
+                    borderRadius: "8px",
                     backgroundColor: "transparent",
                     color: "#6a6a6a",
                     fontSize: "13px",
@@ -756,8 +785,8 @@ export function DetailConditionsPage(): React.JSX.Element {
                 />
                 <span
                   style={{
-                    border: "1px solid #e8e8e8",
-                    borderRadius: "0 8px 8px 0",
+                    border: "none",
+                    borderRadius: "8px",
                     backgroundColor: "transparent",
                     color: "#6a6a6a",
                     fontSize: "13px",
@@ -936,7 +965,9 @@ export function DetailConditionsPage(): React.JSX.Element {
             >
               고용형태
             </h3>
-            <div style={{ fontSize: "12px", color: "#9e9e9e" }}>0/7</div>
+            <div style={{ fontSize: "12px", color: "#9e9e9e" }}>
+              <em style={{ color: "#ff501b", fontStyle: "normal" }}>0</em>/7
+            </div>
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
             {[
@@ -1046,7 +1077,10 @@ export function DetailConditionsPage(): React.JSX.Element {
                 >
                   포함
                 </label>
-                <span style={{ fontSize: "12px", color: "#9e9e9e" }}>0/20</span>
+                <span style={{ fontSize: "12px", color: "#9e9e9e" }}>
+                  <em style={{ color: "#ff501b", fontStyle: "normal" }}>0</em>
+                  /20
+                </span>
               </div>
               <input
                 type="text"
@@ -1055,7 +1089,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   width: "100%",
                   padding: "12px 16px",
                   border: "1px solid #e8e8e8",
-                  borderRadius: "4px",
+                  borderRadius: "8px",
                   fontSize: "14px",
                   backgroundColor: "white",
                   color: "#111111",
@@ -1083,6 +1117,10 @@ export function DetailConditionsPage(): React.JSX.Element {
                 >
                   제외
                 </label>
+                <span style={{ fontSize: "12px", color: "#9e9e9e" }}>
+                  <em style={{ color: "#ff501b", fontStyle: "normal" }}>0</em>
+                  /100
+                </span>
               </div>
               <div style={{ display: "flex", gap: "8px", marginBottom: "8px" }}>
                 <input
@@ -1092,7 +1130,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                     flex: 1,
                     padding: "12px 16px",
                     border: "1px solid #e8e8e8",
-                    borderRadius: "4px",
+                    borderRadius: "8px",
                     fontSize: "14px",
                     backgroundColor: "white",
                     color: "#111111",
@@ -1114,15 +1152,6 @@ export function DetailConditionsPage(): React.JSX.Element {
                 >
                   추가
                 </button>
-              </div>
-              <div
-                style={{
-                  fontSize: "12px",
-                  color: "#9e9e9e",
-                  textAlign: "right",
-                }}
-              >
-                0/100
               </div>
             </div>
           </div>
