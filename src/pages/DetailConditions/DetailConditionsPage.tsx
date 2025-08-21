@@ -228,7 +228,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   style={{
                     padding: "6px 10px",
                     border: "1px solid #f8f8f8",
-                    borderRadius: "4px",
+                    borderRadius: "30px",
                     backgroundColor: "#f8f8f8",
                     color: "#6a6a6a",
                     fontSize: "14px",
@@ -408,7 +408,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   style={{
                     padding: "6px 10px",
                     border: "1px solid #f8f8f8",
-                    borderRadius: "4px",
+                    borderRadius: "30px",
                     backgroundColor: "#f8f8f8",
                     color: "#6a6a6a",
                     fontSize: "14px",
@@ -608,7 +608,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   style={{
                     padding: "6px 10px",
                     border: "1px solid #f8f8f8",
-                    borderRadius: "4px",
+                    borderRadius: "30px",
                     backgroundColor: "#f8f8f8",
                     color: "#6a6a6a",
                     fontSize: "14px",
@@ -955,7 +955,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                   style={{
                     padding: "6px 10px",
                     border: "1px solid #f8f8f8",
-                    borderRadius: "4px",
+                    borderRadius: "30px",
                     backgroundColor: "#f8f8f8",
                     color: "#6a6a6a",
                     fontSize: "14px",
