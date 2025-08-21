@@ -23,7 +23,7 @@ export function DetailConditionsPage(): React.JSX.Element {
               fontSize: "14px",
               color: "#6a6a6a",
               padding: "8px",
-              borderRadius: "4px",
+              borderRadius: "8px",
             }}
           >
             ←
@@ -47,7 +47,7 @@ export function DetailConditionsPage(): React.JSX.Element {
               color: "#ff501b",
               fontWeight: 500,
               padding: "8px",
-              borderRadius: "4px",
+              borderRadius: "8px",
             }}
           >
             초기화
@@ -101,7 +101,7 @@ export function DetailConditionsPage(): React.JSX.Element {
             style={{
               padding: "12px 16px",
               border: "1px solid #ff501b",
-              borderRadius: "4px",
+              borderRadius: "8px",
               backgroundColor: "white",
               color: "#ff501b",
               fontSize: "13px",
@@ -150,7 +150,7 @@ export function DetailConditionsPage(): React.JSX.Element {
             style={{
               padding: "12px 16px",
               border: "1px solid #ff501b",
-              borderRadius: "4px",
+              borderRadius: "8px",
               backgroundColor: "white",
               color: "#ff501b",
               fontSize: "13px",
@@ -821,7 +821,7 @@ export function DetailConditionsPage(): React.JSX.Element {
                 alignItems: "center",
                 gap: "4px",
                 padding: "4px",
-                borderRadius: "4px",
+                borderRadius: "8px",
               }}
             >
               <span>만 나이 기준 안내</span>
@@ -1126,7 +1126,7 @@ export function DetailConditionsPage(): React.JSX.Element {
             backgroundColor: "#ff501b",
             color: "white",
             border: "none",
-            borderRadius: "4px",
+            borderRadius: "8px",
             fontSize: "14px",
             fontWeight: 600,
             cursor: "pointer",
