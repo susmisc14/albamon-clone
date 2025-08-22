@@ -52,3 +52,16 @@
   font-weight: bold;
   color: inherit;
 }
+
+.icon-system_search::before {
+  content: "🔍";
+  font-size: 16px;
+  color: inherit;
+}
+
+.icon-system_close::before {
+  content: "×";
+  font-size: 24px;
+  font-weight: bold;
+  color: inherit;
+}
