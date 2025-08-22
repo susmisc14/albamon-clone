@@ -40,19 +40,35 @@
 ### 1) 프로젝트 스캐폴딩 (Vite + React + CSS Modules)
 
 - TypeScript 포함 권장.
-- 디렉토리 설계(초안):
+- 디렉토리 설계(최신):
   - `src/pages/DetailConditions/`
-    - `DetailConditionsPage.tsx`
+    - `DetailConditionsPage.tsx` (조합만 담당)
     - `components/`
-      - `Header/`
-      - `FilterBar/`
-      - `Chips/`
-      - `BottomSheet/`
-      - `JobCard/`
-      - `Toast/`
-    - `DetailConditionsPage.module.css`
+      - `Header.tsx`, `Header.module.css`
+      - `Section.tsx`, `Section.module.css`
+      - `AddButton.tsx`, `AddButton.module.css`
+      - `Chips.tsx`, `Chips.module.css`
+      - `Toggle.tsx`, `Toggle.module.css`
+      - `Checkbox.tsx`, `Checkbox.module.css`
+      - `Select.tsx`, `Select.module.css`
+      - `Footer.tsx`, `Footer.module.css`
+      - `Layout.tsx`, `Layout.module.css` (container/description/mainContent)
+    - `sections/`
+      - `WorkAreaSection.tsx`
+      - `JobTypeSection.tsx`
+      - `WorkPeriodSection.tsx`
+      - `WorkDaySection.tsx`
+      - `WorkTimeSection.tsx`
+      - `GenderSection.tsx`
+      - `AgeSection.tsx`, `AgeSection.module.css`
+      - `EmploymentTypeSection.tsx`
+      - `KeywordSection.tsx`, `KeywordSection.module.css`
   - `src/styles/variables.module.css` (색상/타이포/간격 토큰)
   - `src/assets/` (SVG/폰트)
+
+메모:
+
+- 페이지 전역 CSS `DetailConditionsPage.module.css`는 삭제됨. 모든 스타일은 컴포넌트/섹션 단위의 CSS Module로 분리됨.
 
 설치 예시(참고):
 
@@ -253,15 +269,32 @@ ts-node tools/extract.ts
 ### 4) 클론 UI 구현 (React + CSS Modules)
 
 - 컴포넌트 분해 원칙: 원본 DOM 구조를 우선 존중. 의미 단위로만 최소한의 래핑.
-- CSS Modules 네이밍: `Block__Element--modifier` 유사 규약(`jobCard__meta--highlight` 등)
+- CSS Modules 네이밍: 컴포넌트 단위 로컬 스코프(파일명 `*.module.css`) 유지. 필요 시 BEM 유사 네이밍을 보조적으로 사용.
 - 전역 스타일 회피: reset 최소화, 필요한 유틸(스크린리더 텍스트 등)만 전역 제공
 - 이미지/아이콘: 가능하면 SVG로 추출하여 1:1 치수 매칭
 - 폰트 로딩: `@font-face`를 추출 그대로 복제, FOUT 방지 옵션 확인
+
+#### 4.1) 구현 현황
+
+- 레이아웃/헤더/푸터/토글/칩/체크박스/셀렉트/키워드 입력/고용형태 섹션까지 컴포넌트화 완료
+- 섹션 간 여백, 헤더 패딩(좌우 12px), 푸터 패딩(8px), 체크박스 상태(비활성/선택) 등 원본 수치 반영
+- 아이콘은 원본의 `<i>`+`::before` 전략을 재현. `.icon-line_check::before { color: inherit }`로 상태 기반 색상 상속 처리
+
+#### 4.2) 리팩토링 원칙(적용됨)
+
+- God Component 제거 → 페이지는 조합만 담당
+- UI 단위 모듈화 + 인접 CSS Module 배치(컴포넌트와 같은 폴더)
+- 중복 스타일 제거, 상태별 스타일은 해당 컴포넌트 모듈로 귀속
 
 ### 5) 픽셀-퍼펙트 시각 회귀 테스트
 
 - Playwright 테스트에서 동일 뷰포트/DPR로 렌더링 후 스크린샷
 - `baseline.png`와 비교, 허용 오차 0.1% 이하 목표(초기에는 0% 지향)
+
+현황:
+
+- 개발 서버에서 수치 교정(섹션 패딩 20px, 헤더 좌우 12px, 푸터 8px, 체크박스 24px 원형 등) 후 수동 검증 완료
+- 테스트 스크립트는 추후 재도입 계획(삭제된 테스트 복구 예정)
 - 차이 발생 시 규칙:
   1. 폰트 서브픽셀 렌더링/힌팅 → 시스템 폰트/가중치/안티앨리어싱 확인
   2. 라인-헤이트, 레터-스페이싱, 자간/커닝 → CSS 수치 강제 지정
