@@ -1,0 +1,15 @@
+.timeSelectionContainer {
+  margin-bottom: 16px;
+}
+
+.timeSelectionRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timeSeparator {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}

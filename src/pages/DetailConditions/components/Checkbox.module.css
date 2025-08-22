@@ -8,11 +8,19 @@
   padding: 8px 0;
 }
 
+.checkboxLabel.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 .checkboxInput {
   position: absolute;
   opacity: 0;
-  width: 0;
-  height: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 
 .checkboxCheckmark {
@@ -31,20 +39,22 @@
   transition: all 0.2s ease;
 }
 
-.checkboxInput:checked + span + .checkboxCheckmark,
-.checkboxInput:checked ~ .checkboxCheckmark {
+/* 체크된 상태 - input이 span 앞에 있으므로 + 선택자 사용 */
+.checkboxInput:checked + .checkboxCheckmark {
   background-color: #ff501b;
   border-color: #ff501b;
   color: white;
 }
 
-.checkboxInput:disabled ~ .checkboxCheckmark {
-  background-color: #f4f4f4;
-  border-color: #d2d2d2;
-  color: #d2d2d2;
+/* 비활성화 상태 - disabled가 우선 적용되도록 더 구체적인 선택자 사용 */
+.checkboxInput:disabled + .checkboxCheckmark {
+  background-color: #f4f4f4 !important;
+  border-color: #d2d2d2 !important;
+  color: #d2d2d2 !important;
 }
 
-.checkboxInput:checked:disabled ~ .checkboxCheckmark {
+/* 체크된 + 비활성화 상태 */
+.checkboxInput:checked:disabled + .checkboxCheckmark {
   background-color: #ff501b;
   border-color: #ff501b;
   color: white;
