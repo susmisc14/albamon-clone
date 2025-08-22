@@ -1,0 +1,58 @@
+.toggleContainer {
+  margin-bottom: 16px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+.toggleGroup {
+  display: flex;
+  height: 44px;
+}
+
+.toggleLabel {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  flex: 1;
+  height: 100%;
+}
+
+.toggleInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggleSpan {
+  border: 1px solid #ff501b;
+  border-radius: 8px;
+  background-color: white;
+  color: #ff501b;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggleSpanInactive {
+  border: none;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #6a6a6a;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

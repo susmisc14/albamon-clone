@@ -1,0 +1,22 @@
+.fixedFooter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  background-color: white;
+  border-top: 1px solid #e8e8e8;
+  z-index: 100;
+}
+
+.resultButton {
+  width: 100%;
+  padding: 16px;
+  background-color: #ff501b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}

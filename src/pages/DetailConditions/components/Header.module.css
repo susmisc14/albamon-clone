@@ -1,0 +1,45 @@
+.headerContainer {
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  height: 56px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #6a6a6a;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.headerTitle {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111111;
+}
+
+.resetButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #6a6a6a;
+  border-radius: 8px;
+  padding: 8px 16px;
+}

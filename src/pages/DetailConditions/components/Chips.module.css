@@ -1,0 +1,43 @@
+.chipContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  height: 34px;
+}
+
+.chipInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.chipSpan {
+  padding: 6px 10px;
+  border: 1px solid #f8f8f8;
+  border-radius: 30px;
+  background-color: #f8f8f8;
+  color: #6a6a6a;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chipActive {
+  background-color: #ff501b;
+  color: white;
+  border-color: #ff501b;
+}
