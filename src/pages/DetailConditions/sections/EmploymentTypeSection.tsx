@@ -1,21 +1,40 @@
 import React from "react";
 import { Section } from "../components/Section";
 import { Chips } from "../components/Chips";
+import conditionData from "../../../../data/condition.json";
 
-export function EmploymentTypeSection(): React.JSX.Element {
+type TProps = { onCountChange?: (count: number) => void };
+
+export function EmploymentTypeSection({
+  onCountChange,
+}: TProps): React.JSX.Element {
+  const options = conditionData.employmentType.collection;
+  const [selected, setSelected] = React.useState<Set<string>>(new Set());
+
+  function handleToggle(label: string): void {
+    setSelected((prev) => {
+      const next = new Set(prev);
+      if (next.has(label)) next.delete(label);
+      else next.add(label);
+      return next;
+    });
+  }
+
+  React.useEffect(() => {
+    if (onCountChange) onCountChange(selected.size);
+  }, [selected, onCountChange]);
+
   return (
-    <Section title="고용형태" counterText="0/7">
+    <Section
+      title={conditionData.employmentType.name}
+      countCurrent={selected.size}
+      countTotal={options.length}
+    >
       <Chips
         name="employmentType"
-        options={[
-          "알바",
-          "정규직",
-          "계약직",
-          "파견직",
-          "청년인턴",
-          "위촉직(프리랜서)",
-          "연수생/교육생",
-        ]}
+        options={options}
+        selected={selected}
+        onToggle={handleToggle}
       />
     </Section>
   );

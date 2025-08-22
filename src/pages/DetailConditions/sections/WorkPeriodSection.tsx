@@ -1,21 +1,40 @@
 import React from "react";
 import { Section } from "../components/Section";
 import { Chips } from "../components/Chips";
+import conditionData from "../../../../data/condition.json";
 
-export function WorkPeriodSection(): React.JSX.Element {
+type TProps = { onCountChange?: (count: number) => void };
+
+export function WorkPeriodSection({
+  onCountChange,
+}: TProps): React.JSX.Element {
+  const [selected, setSelected] = React.useState<Set<string>>(new Set());
+  const options = conditionData.workPeriod.collection;
+
+  function handleToggle(label: string): void {
+    setSelected((prev) => {
+      const next = new Set(prev);
+      if (next.has(label)) next.delete(label);
+      else next.add(label);
+      return next;
+    });
+  }
+
+  React.useEffect(() => {
+    if (onCountChange) onCountChange(selected.size);
+  }, [selected, onCountChange]);
+
   return (
-    <Section title="근무기간" counterText="0/6">
+    <Section
+      title={conditionData.workPeriod.name}
+      countCurrent={selected.size}
+      countTotal={options.length}
+    >
       <Chips
         name="workPeriod"
-        options={[
-          "하루(1일)",
-          "1주일이하",
-          "1주일~1개월",
-          "1개월~3개월",
-          "3개월~6개월",
-          "6개월~1년",
-          "1년이상",
-        ]}
+        options={options}
+        selected={selected}
+        onToggle={handleToggle}
       />
     </Section>
   );
