@@ -124,11 +124,11 @@ export function DetailConditionsPage(): React.JSX.Element {
             ))}
           </div>
           <label className={styles.checkboxLabel}>
-            <input type="checkbox" disabled className={styles.checkboxInput} />
-            <span>협의제외</span>
             <span className={styles.checkboxCheckmark}>
               <i className="Icon_icon__BlZpj icon-line_check"></i>
             </span>
+            <span>협의제외</span>
+            <input type="checkbox" disabled className={styles.checkboxInput} />
           </label>
         </div>
 
@@ -180,8 +180,11 @@ export function DetailConditionsPage(): React.JSX.Element {
             ))}
           </div>
           <label className={styles.checkboxLabel}>
-            <input type="checkbox" disabled className={styles.checkboxInput} />
+            <span className={styles.checkboxCheckmark}>
+              <i className="Icon_icon__BlZpj icon-line_check"></i>
+            </span>
             <span>협의제외</span>
+            <input type="checkbox" disabled className={styles.checkboxInput} />
           </label>
         </div>
 
@@ -203,8 +206,11 @@ export function DetailConditionsPage(): React.JSX.Element {
             </div>
           </div>
           <label className={styles.checkboxLabel}>
-            <input type="checkbox" disabled className={styles.checkboxInput} />
+            <span className={styles.checkboxCheckmark}>
+              <i className="Icon_icon__BlZpj icon-line_check"></i>
+            </span>
             <span>무관제외</span>
+            <input type="checkbox" disabled className={styles.checkboxInput} />
           </label>
         </div>
 
@@ -233,8 +239,11 @@ export function DetailConditionsPage(): React.JSX.Element {
             </div>
           </div>
           <label className={styles.checkboxLabel}>
-            <input type="checkbox" disabled className={styles.checkboxInput} />
+            <span className={styles.checkboxCheckmark}>
+              <i className="Icon_icon__BlZpj icon-line_check"></i>
+            </span>
             <span>무관제외</span>
+            <input type="checkbox" disabled className={styles.checkboxInput} />
           </label>
         </div>
 

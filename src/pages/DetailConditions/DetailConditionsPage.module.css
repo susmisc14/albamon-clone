@@ -514,22 +514,52 @@
   font-size: 13px;
   color: #111111;
   position: relative;
+  padding: 8px 0;
 }
 
 .checkboxInput {
-  margin-right: 8px;
-  width: 16px;
-  height: 16px;
-  accent-color: #ff501b;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .checkboxCheckmark {
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #ff501b;
-  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #d2d2d2;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #d2d2d2;
+  font-size: 14px;
+  margin-right: 8px;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+/* Checked 상태 스타일 */
+.checkboxInput:checked + span + .checkboxCheckmark,
+.checkboxInput:checked ~ .checkboxCheckmark {
+  background-color: #ff501b;
+  border-color: #ff501b;
+  color: white;
+}
+
+/* Disabled 상태 스타일 - 원본과 동일하게 회색 배경 */
+.checkboxInput:disabled ~ .checkboxCheckmark {
+  background-color: #f4f4f4;
+  border-color: #d2d2d2;
+  color: #d2d2d2;
+}
+
+/* Checked + Disabled 상태 스타일 */
+.checkboxInput:checked:disabled ~ .checkboxCheckmark {
+  background-color: #ff501b;
+  border-color: #ff501b;
+  color: white;
 }
 
 /* Age Guide Button */
