@@ -94,6 +94,11 @@
   font-style: normal;
 }
 
+/* Main Content */
+.mainContent {
+  padding: 0 20px 32px;
+}
+
 /* Button Styles */
 .addButton {
   display: flex;
@@ -197,6 +202,25 @@
   pointer-events: none;
 }
 
+/* Age Guide Styles */
+.ageGuideButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  color: #9e9e9e;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.ageGuideText {
+  font-size: 12px;
+  color: #9e9e9e;
+}
+
 /* Input Styles */
 .inputField {
   margin-bottom: 16px;
@@ -254,40 +278,89 @@
 .keywordInputRow {
   display: flex;
   gap: 8px;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .keywordInput {
-  flex: 1;
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  font-size: 14px;
+  height: 48px;
+  background-color: white;
+  color: #111111;
+  box-sizing: border-box;
+}
+
+.keywordInput::placeholder {
+  color: #6a6a6a;
+}
+
+/* Keyword Field Styles */
+.keywordField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.keywordLabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.keywordLabelText {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -0.2px;
+  color: #111111;
+  font-weight: 800;
+}
+
+.keywordCounter {
+  font-size: 12px;
+  color: #9e9e9e;
+}
+
+.keywordDescription {
+  font-size: 12px;
+  color: #9e9e9e;
+  margin-bottom: 16px;
 }
 
 .addKeywordButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background-color: #111111;
   color: white;
   border: none;
   border-radius: 8px;
-  padding: 12px 16px;
+  padding: 10px 14px;
   cursor: pointer;
   font-size: 14px;
-  height: 48px;
+  font-weight: 500;
+  height: 44px;
   white-space: nowrap;
 }
 
-/* Age Guide Styles */
-.ageGuideButton {
-  display: flex;
+/* TSX에서 사용하는 클래스 이름과 매칭 */
+.keywordAddButton {
+  display: inline-flex;
   align-items: center;
-  gap: 4px;
-  background: none;
+  justify-content: center;
+  background-color: #111111;
+  color: white;
   border: none;
-  cursor: pointer;
-  padding: 4px;
   border-radius: 8px;
-}
-
-.ageGuideText {
-  font-size: 13px;
-  color: #6a6a6a;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  height: 44px;
+  white-space: nowrap;
 }
 
 /* Fixed Footer Styles */
@@ -342,83 +415,6 @@
   align-items: center;
   justify-content: center;
   color: white;
-}
-
-/* Counter Highlight */
-.counterHighlight {
-  color: #ff501b;
-  font-style: normal;
-}
-
-/* Description Section */
-.description {
-  padding: 24px 20px;
-  font-size: 13px;
-  color: #9e9e9e;
-  background-color: #f8f8f8;
-  line-height: 1.4;
-  letter-spacing: -0.75px;
-  text-align: center;
-}
-
-/* Main Content */
-.mainContent {
-  padding: 0 20px 32px;
-}
-
-/* Add Button */
-.addButton {
-  padding: 12px 16px;
-  border: 1px solid #d2d2d2;
-  border-radius: 8px;
-  background-color: #fff;
-  color: #171717;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
-  justify-content: center;
-}
-
-/* Chip Container */
-.chipContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.chip {
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  position: relative;
-  height: 34px;
-}
-
-.chipInput {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.chipSpan {
-  padding: 6px 10px;
-  border: 1px solid #f8f8f8;
-  border-radius: 30px;
-  background-color: #f8f8f8;
-  color: #6a6a6a;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  height: 100%;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* Toggle Container */
@@ -556,122 +552,9 @@
   color: #9e9e9e;
 }
 
-/* Select Container */
-.selectContainer {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
-}
-
-.selectWrapper {
-  position: relative;
-  flex: 1;
-}
-
-.select {
-  padding: 12px 16px;
-  border: 1px solid #e8e8e8;
-  border-radius: 8px;
-  font-size: 14px;
-  height: 48px;
-  width: 100%;
-  background-color: white;
-  color: #111111;
-  appearance: none;
-  cursor: pointer;
-}
-
-.selectArrow {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-
 /* Keyword Section */
 .keywordDescription {
   font-size: 12px;
   color: #9e9e9e;
   margin-bottom: 16px;
-}
-
-.keywordInputs {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.keywordField {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.keywordLabel {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
-.keywordLabelText {
-  font-size: 16px;
-  line-height: 22px;
-  letter-spacing: -0.2px;
-  color: #111111;
-  font-weight: 800;
-}
-
-.keywordCounter {
-  font-size: 12px;
-  color: #9e9e9e;
-}
-
-.keywordInput {
-  width: 100%;
-  padding: 12px 16px;
-  border: 1px solid #e8e8e8;
-  border-radius: 8px;
-  font-size: 14px;
-  height: 48px;
-  background-color: white;
-  color: #111111;
-  box-sizing: border-box;
-}
-
-.keywordInput::placeholder {
-  color: #6a6a6a;
-}
-
-.keywordInputRow {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 8px;
-}
-
-.keywordAddButton {
-  padding: 12px 16px;
-  background-color: #111111;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  white-space: nowrap;
-  height: 48px;
-}
-
-.resultButton {
-  width: 100%;
-  padding: 16px;
-  background-color: #ff501b;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
 }
