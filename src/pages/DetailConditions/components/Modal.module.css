@@ -1,0 +1,1212 @@
+/* 원본 사이트 분석 결과 기반 Modal 구조 */
+.container {
+  position: fixed;
+  z-index: 9999;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 0px;
+  padding: 0px;
+  margin: 0px;
+  display: block;
+  flex-direction: row;
+  overflow: visible;
+  color: rgb(23, 23, 23);
+  font-size: 16px;
+  font-weight: 400;
+  flex: 0 1 auto;
+  flex-grow: 0;
+  flex-shrink: 1;
+  min-width: 0px;
+  min-height: 0px;
+  box-sizing: border-box;
+  opacity: 1;
+  visibility: visible;
+  text-align: start;
+  line-height: 16px;
+  vertical-align: baseline;
+}
+
+.content {
+  position: static;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  margin: 0px;
+  border: 0px none rgb(23, 23, 23);
+  border-radius: 0px;
+  overflow: hidden;
+  color: rgb(23, 23, 23);
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+  text-align: start;
+  line-height: 16px;
+  vertical-align: baseline;
+}
+
+/* 헤더 영역 - 원본 분석 결과 적용 */
+.header {
+  position: relative;
+  width: 100%;
+  height: 59px;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 20px;
+  margin: 0px;
+  border-radius: 0px;
+  overflow: visible;
+  color: rgb(23, 23, 23);
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+.closeButton {
+  position: static;
+  width: 24px;
+  height: 24px;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  border: 0px none rgb(23, 23, 23);
+  border-radius: 0px;
+  overflow: visible;
+  color: rgb(23, 23, 23);
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  text-align: center;
+  line-height: 20px;
+  vertical-align: baseline;
+}
+
+.closeButton:focus {
+  outline: none;
+}
+
+.closeButton:hover {
+  background-color: rgb(245, 245, 245);
+}
+
+.closeButton i {
+  font-size: 24px;
+  color: rgb(23, 23, 23);
+}
+
+/* 제목 영역 - 원본 분석 결과 적용 */
+.title {
+  position: static;
+  width: auto;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  display: block;
+  flex-direction: row;
+  padding: 0px;
+  margin: 0px;
+  border: 0px none rgb(23, 23, 23);
+  border-radius: 0px;
+  overflow: visible;
+  color: rgb(23, 23, 23);
+  font-size: 18px;
+  font-weight: 600;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 20px;
+  vertical-align: baseline;
+}
+
+/* 메인 영역 - 원본 분석 결과 적용 */
+.main {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background-color: #f8f8f8;
+}
+
+/* 검색 컨테이너 */
+.searchContainer {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  padding: 16px 20px;
+  margin: 0px;
+  border: 0px none rgb(23, 23, 23);
+  border-radius: 0px;
+  overflow: visible;
+  color: rgb(23, 23, 23);
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+.searchInput {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 12px;
+  margin: 0px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: visible;
+  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.searchInput:focus-within {
+  border-color: #ff501b;
+}
+
+.searchInput i {
+  font-size: 20px;
+  color: #999;
+  margin-right: 12px;
+}
+
+.searchField {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+  font-weight: 400;
+}
+
+.searchField::placeholder {
+  color: #999;
+}
+
+/* 유사동 묶기 체크박스 */
+.similarAreaContainer {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 16px 20px;
+  margin: 0px;
+  border: 0px none rgb(23, 23, 23);
+  border-radius: 0px;
+  overflow: visible;
+  color: rgb(23, 23, 23);
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+.similarAreaCheckbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  accent-color: rgb(255, 80, 27);
+}
+
+.checkboxText {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(106, 106, 106);
+  margin-right: 8px;
+  line-height: 20px;
+}
+
+.tooltipButton {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  border: 0px none rgb(23, 23, 23);
+  border-radius: 0px;
+  overflow: visible;
+  color: rgb(153, 153, 153);
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  text-align: center;
+  line-height: 20px;
+  vertical-align: baseline;
+}
+
+.tooltipButton:hover {
+  color: rgb(102, 102, 102);
+}
+
+.tooltipButton i {
+  font-size: 16px;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 1000;
+  background-color: rgba(255, 0, 0, 0.3);
+  color: rgb(23, 23, 23);
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0px !important;
+  padding: 0px !important;
+  border: 0px none rgb(23, 23, 23);
+  border-radius: 0px;
+  box-sizing: border-box !important;
+  outline: rgb(23, 23, 23) none 0px;
+  outline-width: 0px;
+  outline-color: rgb(23, 23, 23);
+  background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box
+    border-box;
+  background-color: rgba(0, 0, 0, 0);
+  background-repeat: repeat;
+  background-position: 0% 0%;
+  background-attachment: scroll;
+  line-height: 16px;
+  text-align: start;
+  text-decoration: rgb(23, 23, 23);
+  text-indent: 0px;
+  word-spacing: 0px;
+  text-overflow: clip;
+  transform-origin: 50% 50%;
+  transition: all;
+  animation: none 0s ease 0s 1 normal none running;
+  opacity: 1;
+  visibility: visible;
+  overflow: visible;
+  overflow-x: visible;
+  overflow-y: visible;
+  border-collapse: separate;
+  border-spacing: 0px;
+  caption-side: top;
+  empty-cells: show;
+  list-style: outside none disc;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.tooltipInner {
+  position: relative;
+  width: calc(100vw - 60px);
+  display: block;
+  flex-direction: row;
+  flex: 0 1 auto;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-wrap: nowrap;
+  vertical-align: baseline;
+  margin: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  border: 0px none rgb(23, 23, 23);
+  border-top: 0px none rgb(23, 23, 23);
+  border-right: 0px none rgb(23, 23, 23);
+  border-bottom: 0px none rgb(23, 23, 23);
+  border-left: 0px none rgb(23, 23, 23);
+  border-width: 0px;
+  border-color: rgb(23, 23, 23);
+  border-radius: 0px;
+  box-sizing: border-box;
+  outline: rgb(23, 23, 23) none 0px;
+  outline-width: 0px;
+  outline-color: rgb(23, 23, 23);
+  background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box
+    border-box;
+  background-color: rgba(0, 0, 0, 0);
+  background-repeat: repeat;
+  background-position: 0% 0%;
+  background-attachment: scroll;
+  color: rgb(23, 23, 23);
+  font-family: "Pretendard Variable", -apple-system, "system-ui",
+    "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: start;
+  text-decoration: rgb(23, 23, 23);
+  text-indent: 0px;
+  word-spacing: 0px;
+  text-overflow: clip;
+  transform-origin: 50% 50%;
+  transition: all;
+  animation: none 0s ease 0s 1 normal none running;
+  opacity: 1;
+  visibility: visible;
+  overflow: visible;
+  overflow-x: visible;
+  overflow-y: visible;
+  border-collapse: separate;
+  border-spacing: 0px;
+  caption-side: top;
+  empty-cells: show;
+  list-style: outside none disc;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.tooltipBox {
+  position: relative;
+  min-width: 0px;
+  min-height: 0px;
+  display: block;
+  flex-direction: row;
+  flex: 0 1 auto;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-wrap: nowrap;
+  vertical-align: baseline;
+  margin: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding: 16px;
+  padding-top: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  border: 1px solid rgb(184, 184, 184);
+  border-top: 1px solid rgb(184, 184, 184);
+  border-right: 1px solid rgb(184, 184, 184);
+  border-bottom: 1px solid rgb(184, 184, 184);
+  border-left: 1px solid rgb(184, 184, 184);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(184, 184, 184);
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px 0px;
+  outline: rgb(106, 106, 106) none 0px;
+  outline-width: 0px;
+  outline-color: rgb(106, 106, 106);
+  background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box
+    border-box;
+  background-color: rgb(255, 255, 255);
+  background-repeat: repeat;
+  background-position: 0% 0%;
+  background-attachment: scroll;
+  color: rgb(106, 106, 106);
+  font-family: "Pretendard Variable", -apple-system, "system-ui",
+    "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: start;
+  text-decoration: rgb(106, 106, 106);
+  text-indent: 0px;
+  word-spacing: 0px;
+  text-overflow: clip;
+  transform-origin: 50% 50%;
+  transition: all;
+  animation: none 0s ease 0s 1 normal none running;
+  opacity: 1;
+  visibility: visible;
+  overflow: visible;
+  overflow-x: visible;
+  overflow-y: visible;
+  border-collapse: separate;
+  border-spacing: 0px;
+  caption-side: top;
+  empty-cells: show;
+  list-style: outside none disc;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.tooltipContent {
+  position: static;
+  min-width: 0px;
+  min-height: 0px;
+  display: block;
+  flex-direction: row;
+  flex: 0 1 auto;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-wrap: nowrap;
+  vertical-align: baseline;
+  margin: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  border: 0px none rgb(106, 106, 106);
+  border-top: 0px none rgb(106, 106, 106);
+  border-right: 0px none rgb(106, 106, 106);
+  border-bottom: 0px none rgb(106, 106, 106);
+  border-left: 0px none rgb(106, 106, 106);
+  border-width: 0px;
+  border-color: rgb(106, 106, 106);
+  border-radius: 0px;
+  box-sizing: border-box;
+  outline: rgb(106, 106, 106) none 0px;
+  outline-width: 0px;
+  outline-color: rgb(106, 106, 106);
+  background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box
+    border-box;
+  background-color: rgba(0, 0, 0, 0);
+  background-repeat: repeat;
+  background-position: 0% 0%;
+  background-attachment: scroll;
+  color: rgb(106, 106, 106);
+  font-family: "Pretendard Variable", -apple-system, "system-ui",
+    "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: start;
+  text-decoration: rgb(106, 106, 106);
+  text-indent: 0px;
+  word-spacing: 0px;
+  text-overflow: clip;
+  transform-origin: 50% 50%;
+  transition: all;
+  animation: none 0s ease 0s 1 normal none running;
+  opacity: 1;
+  visibility: visible;
+  overflow: visible;
+  overflow-x: visible;
+  overflow-y: visible;
+  border-collapse: separate;
+  border-spacing: 0px;
+  caption-side: top;
+  empty-cells: show;
+  list-style: outside none disc;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.tooltipText {
+  position: static;
+  min-width: 0px;
+  min-height: 0px;
+  display: block;
+  flex-direction: row;
+  flex: 0 1 auto;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-wrap: nowrap;
+  vertical-align: baseline;
+  margin: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding: 0px 16px 0px 0px;
+  padding-top: 0px;
+  padding-right: 16px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  border: 0px none rgb(106, 106, 106);
+  border-top: 0px none rgb(106, 106, 106);
+  border-right: 0px none rgb(106, 106, 106);
+  border-bottom: 0px none rgb(106, 106, 106);
+  border-left: 0px none rgb(106, 106, 106);
+  border-width: 0px;
+  border-color: rgb(106, 106, 106);
+  border-radius: 0px;
+  box-sizing: border-box;
+  outline: rgb(106, 106, 106) none 0px;
+  outline-width: 0px;
+  outline-color: rgb(106, 106, 106);
+  background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box
+    border-box;
+  background-color: rgba(0, 0, 0, 0);
+  background-repeat: repeat;
+  background-position: 0% 0%;
+  background-attachment: scroll;
+  color: rgb(106, 106, 106);
+  font-family: "Pretendard Variable", -apple-system, "system-ui",
+    "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: start;
+  text-decoration: rgb(106, 106, 106);
+  text-indent: 0px;
+  word-spacing: 0px;
+  word-break: break-word;
+  word-wrap: break-word;
+  text-overflow: clip;
+  transform-origin: 50% 50%;
+  transition: all;
+  animation: none 0s ease 0s 1 normal none running;
+  opacity: 1;
+  visibility: visible;
+  overflow: visible;
+  overflow-x: visible;
+  overflow-y: visible;
+  border-collapse: separate;
+  border-spacing: 0px;
+  caption-side: top;
+  empty-cells: show;
+  list-style: outside none disc;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.tooltipExample {
+  position: static;
+  min-width: 0px;
+  min-height: 0px;
+  display: block;
+  flex-direction: row;
+  flex: 0 1 auto;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-wrap: nowrap;
+  vertical-align: baseline;
+  margin: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  border: 0px none rgb(255, 80, 27);
+  border-top: 0px none rgb(255, 80, 27);
+  border-right: 0px none rgb(255, 80, 27);
+  border-bottom: 0px none rgb(255, 80, 27);
+  border-left: 0px none rgb(255, 80, 27);
+  border-width: 0px;
+  border-color: rgb(255, 80, 27);
+  border-radius: 0px;
+  box-sizing: border-box;
+  outline: rgb(255, 80, 27) none 0px;
+  outline-width: 0px;
+  outline-color: rgb(255, 80, 27);
+  background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box
+    border-box;
+  background-color: rgba(0, 0, 0, 0);
+  background-repeat: repeat;
+  background-position: 0% 0%;
+  background-attachment: scroll;
+  color: rgb(255, 80, 27);
+  font-family: "Pretendard Variable", -apple-system, "system-ui",
+    "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: start;
+  text-decoration: rgb(255, 80, 27);
+  text-indent: 0px;
+  word-spacing: 0px;
+  text-overflow: clip;
+  transform-origin: 50% 50%;
+  transition: all;
+  animation: none 0s ease 0s 1 normal none running;
+  opacity: 1;
+  visibility: visible;
+  overflow: visible;
+  overflow-x: visible;
+  overflow-y: visible;
+  border-collapse: separate;
+  border-spacing: 0px;
+  caption-side: top;
+  empty-cells: show;
+  list-style: outside none disc;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.tooltipCloseButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  min-width: 0px;
+  min-height: 0px;
+  display: block;
+  flex-direction: row;
+  flex: 0 1 auto;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-wrap: nowrap;
+  vertical-align: baseline;
+  margin: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  border: 0px none rgb(184, 184, 184);
+  border-top: 0px none rgb(184, 184, 184);
+  border-right: 0px none rgb(184, 184, 184);
+  border-bottom: 0px none rgb(184, 184, 184);
+  border-left: 0px none rgb(184, 184, 184);
+  border-width: 0px;
+  border-color: rgb(184, 184, 184);
+  border-radius: 0px;
+  box-sizing: border-box;
+  outline: rgb(184, 184, 184) none 0px;
+  outline-width: 0px;
+  outline-color: rgb(184, 184, 184);
+  background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box
+    border-box;
+  background-color: rgba(0, 0, 0, 0);
+  background-repeat: repeat;
+  background-position: 0% 0%;
+  background-attachment: scroll;
+  color: rgb(184, 184, 184);
+  font-family: "Pretendard Variable", -apple-system, "system-ui",
+    "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+  text-decoration: rgb(184, 184, 184);
+  text-indent: 0px;
+  word-spacing: 0px;
+  text-overflow: clip;
+  transform-origin: 50% 50%;
+  transition: all;
+  animation: none 0s ease 0s 1 normal none running;
+  opacity: 1;
+  visibility: visible;
+  overflow: visible;
+  overflow-x: visible;
+  overflow-y: visible;
+  cursor: pointer;
+  border-collapse: separate;
+  border-spacing: 0px;
+  caption-side: top;
+  empty-cells: show;
+  list-style: outside none disc;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+/* 3개 컬럼 컨테이너 - 원본 사이트 구조 */
+.columnContainer {
+  position: static;
+  z-index: 0;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  vertical-align: baseline;
+  margin: 0px;
+  padding: 0px;
+  border-top: 1px solid rgb(232, 232, 232);
+  border-right: 0px none rgb(23, 23, 23);
+  border-bottom: 1px solid rgb(232, 232, 232);
+  border-left: 0px none rgb(23, 23, 23);
+  border-width: 1px 0px 1px 0px;
+  border-style: solid none solid none;
+  border-color: rgb(232, 232, 232) rgb(23, 23, 23) rgb(232, 232, 232)
+    rgb(23, 23, 23);
+  border-radius: 0px;
+  box-sizing: border-box;
+  outline: rgb(23, 23, 23) none 0px;
+  outline-width: 0px;
+  outline-color: rgb(23, 23, 23);
+  background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box
+    border-box;
+  background-color: rgba(0, 0, 0, 0);
+  background-repeat: repeat;
+  background-position: 0% 0%;
+  background-attachment: scroll;
+  color: rgb(23, 23, 23);
+  font-family: "Pretendard Variable", -apple-system, "system-ui",
+    "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: start;
+  text-decoration: rgb(23, 23, 23);
+  text-indent: 0px;
+  word-spacing: 0px;
+  text-overflow: clip;
+  transform-origin: 50% 50%;
+  transition: all;
+  animation: none 0s ease 0s 1 normal none running;
+  opacity: 1;
+  visibility: visible;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border-collapse: separate;
+  border-spacing: 0px;
+  caption-side: top;
+  empty-cells: show;
+  list-style: outside none disc;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.column {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  vertical-align: baseline;
+  margin: 0px;
+  padding: 0px;
+  border: 0px none rgb(23, 23, 23);
+  border-top: 0px none rgb(23, 23, 23);
+  border-right: 1px solid rgb(232, 232, 232);
+  border-bottom: 0px none rgb(23, 23, 23);
+  border-left: 0px none rgb(23, 23, 23);
+  border-width: 0px 1px 0px 0px;
+  border-style: none solid none none;
+  border-color: rgb(23, 23, 23) rgb(232, 232, 232) rgb(23, 23, 23)
+    rgb(23, 23, 23);
+  border-radius: 0px;
+  box-sizing: border-box;
+  outline: rgb(23, 23, 23) none 0px;
+  outline-width: 0px;
+  outline-color: rgb(23, 23, 23);
+  background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box
+    border-box;
+  background-color: rgba(0, 0, 0, 0);
+  background-repeat: repeat;
+  background-position: 0% 0%;
+  background-attachment: scroll;
+  color: rgb(23, 23, 23);
+  font-family: "Pretendard Variable", -apple-system, "system-ui",
+    "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: start;
+  text-decoration: rgb(23, 23, 23);
+  text-indent: 0px;
+  word-spacing: 0px;
+  text-overflow: clip;
+  transform-origin: 50% 50%;
+  transition: all;
+  animation: none 0s ease 0s 1 normal none running;
+  opacity: 1;
+  visibility: visible;
+  overflow: hidden auto;
+  overflow-x: hidden;
+  border-collapse: separate;
+  border-spacing: 0px;
+  caption-side: top;
+  empty-cells: show;
+  list-style: outside none disc;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+/* 마지막 컬럼은 오른쪽 테두리 제거 */
+.column:last-child {
+  border-right: 0px none rgb(23, 23, 23);
+  border-width: 0px;
+}
+
+.columnTitle {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: auto;
+  height: 43.8125px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+  vertical-align: baseline;
+  margin: 0px;
+  padding: 0px;
+  border-top: 0px none rgb(23, 23, 23);
+  border-right: 0px none rgb(23, 23, 23);
+  border-bottom: 1px solid rgb(232, 232, 232);
+  border-left: 0px none rgb(23, 23, 23);
+  border-width: 0px 0px 1px;
+  border-style: none none solid;
+  border-color: rgb(23, 23, 23) rgb(23, 23, 23) rgb(232, 232, 232);
+  border-radius: 0px;
+  box-sizing: border-box;
+  outline: rgb(23, 23, 23) none 0px;
+  outline-width: 0px;
+  outline-color: rgb(23, 23, 23);
+  background: rgb(248, 248, 248) none repeat scroll 0% 0% / auto padding-box
+    border-box;
+  background-color: rgb(248, 248, 248);
+  background-repeat: repeat;
+  background-position: 0% 0%;
+  background-attachment: scroll;
+  color: rgb(23, 23, 23);
+  font-family: "Pretendard Variable", -apple-system, "system-ui",
+    "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 19px;
+  text-align: start;
+  text-decoration: rgb(23, 23, 23);
+  text-indent: 0px;
+  word-spacing: 0px;
+  text-overflow: clip;
+  transform-origin: 50% 50%;
+  transition: all;
+  animation: none 0s ease 0s 1 normal none running;
+  opacity: 1;
+  visibility: visible;
+  overflow: visible;
+  overflow-x: visible;
+  overflow-y: visible;
+  border-collapse: separate;
+  border-spacing: 0px;
+  caption-side: top;
+  empty-cells: show;
+  list-style: outside none disc;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.columnContent {
+  position: static;
+  width: auto;
+  flex: 1;
+  display: block;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  vertical-align: baseline;
+  margin: 0px;
+  padding: 0px;
+  border: 0px none rgb(23, 23, 23);
+  border-top: 0px none rgb(23, 23, 23);
+  border-right: 0px none rgb(23, 23, 23);
+  border-bottom: 0px none rgb(23, 23, 23);
+  border-left: 0px none rgb(23, 23, 23);
+  border-width: 0px;
+  border-color: rgb(23, 23, 23);
+  border-radius: 0px;
+  box-sizing: border-box;
+  outline: rgb(23, 23, 23) none 0px;
+  outline-width: 0px;
+  outline-color: rgb(23, 23, 23);
+  background: white none repeat scroll 0% 0% / auto padding-box border-box;
+  background-color: white;
+  background-repeat: repeat;
+  background-position: 0% 0%;
+  background-attachment: scroll;
+  color: rgb(23, 23, 23);
+  font-family: "Pretendard Variable", -apple-system, "system-ui",
+    "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: start;
+  text-decoration: rgb(23, 23, 23);
+  text-indent: 0px;
+  word-spacing: 0px;
+  text-overflow: clip;
+  transform-origin: 50% 50%;
+  transition: all;
+  animation: none 0s ease 0s 1 normal none running;
+  opacity: 1;
+  visibility: visible;
+  border-collapse: separate;
+  border-spacing: 0px;
+  caption-side: top;
+  empty-cells: show;
+  list-style: outside none disc;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.areaButton {
+  position: static;
+  width: 100%;
+  min-width: 0px;
+  min-height: 44px;
+  display: block;
+  flex-direction: row;
+  flex: 0 1 auto;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-wrap: nowrap;
+  vertical-align: baseline;
+  margin: 0px;
+  padding: 0px 12px;
+  border: 1px solid rgb(255, 243, 239);
+  border-top: 1px solid rgb(255, 243, 239);
+  border-right: 1px solid rgb(255, 243, 239);
+  border-bottom: 1px solid rgb(255, 243, 239);
+  border-left: 1px solid rgb(255, 243, 239);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(255, 243, 239);
+  border-radius: 0px;
+  box-sizing: border-box;
+  outline: rgb(255, 255, 255) none 0px;
+  outline-width: 0px;
+  outline-color: rgb(255, 255, 255);
+  background: rgb(255, 80, 27) none repeat scroll 0% 0% / auto padding-box
+    border-box;
+  background-color: rgb(255, 80, 27);
+  background-repeat: repeat;
+  background-position: 0% 0%;
+  background-attachment: scroll;
+  color: rgb(255, 255, 255);
+  font-family: "Pretendard Variable", -apple-system, "system-ui",
+    "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: rgb(255, 255, 255);
+  text-indent: 0px;
+  word-spacing: 0px;
+  text-overflow: clip;
+  transform-origin: 50% 50%;
+  transition: all;
+  animation: none 0s ease 0s 1 normal none running;
+  opacity: 1;
+  visibility: visible;
+  overflow: visible;
+  overflow-x: visible;
+  overflow-y: visible;
+  cursor: pointer;
+  border-collapse: separate;
+  border-spacing: 0px;
+  caption-side: top;
+  empty-cells: show;
+  list-style: outside none disc;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.areaButton:hover {
+  background-color: rgb(248, 248, 248);
+}
+
+.areaButton.selected {
+  background-color: rgb(255, 80, 27);
+  color: rgb(255, 255, 255);
+  border-color: rgb(255, 80, 27);
+}
+
+/* 시·구·군 선택 시 특별한 스타일 (배경색-옅은 주황/텍스트-주황) */
+.areaButton.selectedDistrict {
+  background-color: rgb(255, 245, 243) !important;
+  color: rgb(255, 80, 27) !important;
+  font-weight: 700 !important;
+}
+
+/* 선택되지 않은 버튼 스타일 */
+.areaButton:not(.selected):not(.selectedDistrict) {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(106, 106, 106);
+  border-color: rgba(0, 0, 0, 0);
+  font-weight: 400;
+}
+
+.emptyMessage {
+  padding: 20px;
+  text-align: center;
+  color: rgb(153, 153, 153);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* 푸터 영역 - 원본 분석 결과 적용 */
+.footer {
+  position: static;
+  width: 100%;
+  height: 65px;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 8px;
+  margin: 0px;
+  border-radius: 0px;
+  overflow: visible;
+  color: rgb(23, 23, 23);
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+  text-align: start;
+  line-height: 16px;
+  vertical-align: baseline;
+}
+
+.footerButton {
+  flex: 1;
+  padding: 16px;
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 8px;
+  background-color: white;
+  color: rgb(23, 23, 23);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.footerButton:hover {
+  background-color: rgb(248, 248, 248);
+}
+
+.primaryButton {
+  border-color: rgb(255, 80, 27);
+  background-color: rgb(255, 80, 27);
+  color: white;
+}
+
+.primaryButton:hover {
+  background-color: rgb(230, 72, 24);
+  border-color: rgb(230, 72, 24);
+}
+
+/* 접근성을 위한 스크린 리더 텍스트 */
+.screenOut {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 버튼 내부 텍스트 */
+.buttonInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 선택된 내용 표시 (바디와 푸터 사이 chip 블록) */
+.selectedContentBlock {
+  background-color: white;
+  border-top: 1px solid rgb(230, 230, 230);
+  border-bottom: 1px solid rgb(230, 230, 230);
+  margin: 0;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 100;
+  padding: 20px;
+}
+
+.selectedContentHeader {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  padding-bottom: 12px;
+}
+
+.selectedContentCount {
+  font-size: 12px;
+  color: rgb(106, 106, 106);
+  font-weight: 500;
+}
+
+.selectedContentCount .current {
+  color: rgb(255, 80, 27);
+  font-weight: 600;
+}
+
+.selectedContentBody {
+  background-color: white;
+}
+
+.selectedAreaChip {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgb(255, 245, 243);
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  gap: 8px;
+}
+
+.selectedAreaText {
+  font-size: 14px;
+  color: rgb(255, 80, 27);
+  font-weight: 500;
+}
+
+.selectedAreaRemoveButton {
+  width: 16px;
+  height: 16px;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: rgb(153, 153, 153);
+  transition: all 0.2s;
+  padding: 0;
+}
+
+.selectedAreaRemoveButton:hover {
+  background-color: rgb(240, 240, 240);
+  color: rgb(106, 106, 106);
+}
+
+.similarAreaCheckbox input[type="checkbox"]:disabled + .checkboxText {
+  color: rgb(153, 153, 153);
+  cursor: not-allowed;
+}
+
+.similarAreaCheckbox input[type="checkbox"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
