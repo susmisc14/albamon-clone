@@ -25,6 +25,7 @@ export function DetailConditionsPage(): React.JSX.Element {
   const [gd, setGd] = React.useState(0);
   const [kw, setKw] = React.useState(0);
   const [wa, setWa] = React.useState(0);
+  const [jt, setJt] = React.useState(0);
   const [et, setEt] = React.useState(0);
   function handleReset(): void {
     setResetTick((t) => t + 1);
@@ -43,6 +44,7 @@ export function DetailConditionsPage(): React.JSX.Element {
               gd * 0.008 + // 성별: 낮은 영향
               kw * 0.012 + // 키워드: 중간 영향
               wa * 0.03 + // 근무지역: 매우 높은 영향
+              jt * 0.02 + // 업직종: 중간 영향
               et * 0.018 // 고용형태: 중간 영향
           ))
     )
@@ -53,7 +55,7 @@ export function DetailConditionsPage(): React.JSX.Element {
       <Description />
       <MainContent>
         <WorkAreaSection key={`wa-${resetTick}`} onCountChange={setWa} />
-        <JobTypeSection />
+        <JobTypeSection key={`jt-${resetTick}`} onCountChange={setJt} />
         <WorkPeriodSection key={`wp-${resetTick}`} onCountChange={setWp} />
         <WorkDaySection key={`wd-${resetTick}`} onCountChange={setWd} />
         <WorkTimeSection key={`wt-${resetTick}`} onCountChange={setWt} />
