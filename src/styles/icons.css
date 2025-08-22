@@ -1,0 +1,47 @@
+/* Albamon Icon Styles */
+
+.Icon_icon__BlZpj {
+  display: inline-block;
+  font-style: normal;
+  vertical-align: middle;
+}
+
+/* System Icons */
+.icon-system_back::before {
+  content: "←";
+  font-size: 18px;
+  color: #111111;
+}
+
+.icon-line_plus::before {
+  content: "+";
+  font-size: 20px;
+  font-weight: 300;
+  color: #111111;
+}
+
+.icon-system_select_arrow_down::before {
+  content: "▼";
+  font-size: 12px;
+  color: #d2d2d2;
+}
+
+.icon-system_tooltip1::before {
+  content: "?";
+  font-size: 12px;
+  color: #ffffff;
+  background: #d2d2d2;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.icon-line_check::before {
+  content: "✓";
+  font-size: 14px;
+  color: #ff501b;
+}
