@@ -1170,6 +1170,18 @@
   white-space: nowrap;
 }
 
+.clickableChip {
+  cursor: pointer;
+}
+
+.jobChipsContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  overflow: hidden;
+  justify-content: flex-end;
+}
+
 .selectedAreaText {
   font-size: 14px;
   color: rgb(255, 80, 27);
