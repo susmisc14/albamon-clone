@@ -34,25 +34,15 @@ export function JobTypeSection({ onCountChange }: TProps): React.JSX.Element {
   // 현재 선택된 카테고리의 세부 업종 데이터
   const currentJobs = getJobsByCategory(selectedCategory);
 
-  // Modal에 전달할 컬럼 데이터
+  // 모달용 컬럼 데이터 구성 (2개 컬럼)
   const modalColumns = [
     {
       title: "대분류",
-      data: jobTypeOptions,
+      data: [jobData.name],
     },
     {
-      title: "중분류",
-      data: [
-        "외식·음료",
-        "매장관리",
-        "배달·운전",
-        "사무·회계",
-        "고객상담·영업",
-      ],
-    },
-    {
-      title: "세부 업종",
-      data: currentJobs,
+      title: "업직종",
+      data: jobData.collection,
     },
   ];
 

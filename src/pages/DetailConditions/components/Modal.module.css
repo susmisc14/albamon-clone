@@ -167,7 +167,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0px 12px;
+  padding: 0px 40px 0px 12px;
   margin: 0px;
   border: 1px solid #ddd;
   border-radius: 6px;
@@ -184,9 +184,13 @@
 }
 
 .searchInput i {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 20px;
   color: #999;
-  margin-right: 12px;
+  pointer-events: none;
 }
 
 .searchField {
@@ -965,66 +969,18 @@
   list-style-position: outside;
 }
 
+/* 컬럼 버튼 기본 스타일 */
 .areaButton {
-  position: static;
   width: 100%;
-  min-width: 0px;
-  min-height: 44px;
-  display: block;
-  flex-direction: row;
-  flex: 0 1 auto;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-wrap: nowrap;
-  vertical-align: baseline;
-  margin: 0px;
-  padding: 0px 12px;
-  border: 1px solid rgb(255, 243, 239);
-  border-top: 1px solid rgb(255, 243, 239);
-  border-right: 1px solid rgb(255, 243, 239);
-  border-bottom: 1px solid rgb(255, 243, 239);
-  border-left: 1px solid rgb(255, 243, 239);
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgb(255, 243, 239);
-  border-radius: 0px;
-  box-sizing: border-box;
-  outline: rgb(255, 255, 255) none 0px;
-  outline-width: 0px;
-  outline-color: rgb(255, 255, 255);
-  background: rgb(255, 80, 27) none repeat scroll 0% 0% / auto padding-box
-    border-box;
-  background-color: rgb(255, 80, 27);
-  background-repeat: repeat;
-  background-position: 0% 0%;
-  background-attachment: scroll;
-  color: rgb(255, 255, 255);
-  font-family: "Pretendard Variable", -apple-system, "system-ui",
-    "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", arial, sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 20px;
+  padding: 12px 16px;
+  border: none;
+  background: none;
   text-align: left;
-  text-decoration: rgb(255, 255, 255);
-  text-indent: 0px;
-  word-spacing: 0px;
-  text-overflow: clip;
-  transform-origin: 50% 50%;
-  transition: all;
-  animation: none 0s ease 0s 1 normal none running;
-  opacity: 1;
-  visibility: visible;
-  overflow: visible;
-  overflow-x: visible;
-  overflow-y: visible;
+  font-size: 14px;
   cursor: pointer;
-  border-collapse: separate;
-  border-spacing: 0px;
-  caption-side: top;
-  empty-cells: show;
-  list-style: outside none disc;
-  list-style-type: disc;
-  list-style-position: outside;
+  transition: all 0.2s;
+  border-radius: 0;
+  outline: none;
 }
 
 .areaButton:hover {
@@ -1037,18 +993,30 @@
   border-color: rgb(255, 80, 27);
 }
 
-/* 시·구·군 선택 시 특별한 스타일 (배경색-옅은 주황/텍스트-주황) */
+/* 시·구·군 선택 시 활성화 스타일 */
 .areaButton.selectedDistrict {
-  background-color: rgb(255, 245, 243) !important;
+  background-color: rgb(255, 240, 235) !important;
   color: rgb(255, 80, 27) !important;
+  border-color: transparent !important;
   font-weight: 700 !important;
 }
 
+/* 업직종 선택 시 활성화 스타일 */
+.areaButton.selectedJob {
+  background-color: transparent;
+  color: rgb(255, 80, 27);
+  border: none;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 /* 선택되지 않은 버튼 스타일 */
-.areaButton:not(.selected):not(.selectedDistrict) {
-  background-color: rgba(0, 0, 0, 0);
-  color: rgb(106, 106, 106);
-  border-color: rgba(0, 0, 0, 0);
+.areaButton:not(.selected):not(.selectedDistrict):not(.selectedJob) {
+  background-color: white;
+  color: rgb(23, 23, 23);
+  border: none;
   font-weight: 400;
 }
 
@@ -1162,20 +1130,53 @@
 }
 
 .selectedContentBody {
-  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  padding: 0;
 }
 
+/* 선택된 지역 chip */
 .selectedAreaChip {
   display: inline-flex;
   align-items: center;
-  background-color: rgb(255, 245, 243);
-  border: none;
-  border-radius: 6px;
-  padding: 8px 12px;
   gap: 8px;
+  padding: 8px 12px;
+  background-color: rgb(255, 240, 235);
+  color: rgb(255, 80, 27);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: none;
+  border: none;
+}
+
+/* 선택된 업직종 chip */
+.selectedJobChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: rgb(255, 240, 235);
+  color: rgb(255, 80, 27);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: none;
+  border: none;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .selectedAreaText {
+  font-size: 14px;
+  color: rgb(255, 80, 27);
+  font-weight: 500;
+}
+
+.selectedJobText {
   font-size: 14px;
   color: rgb(255, 80, 27);
   font-weight: 500;
@@ -1209,4 +1210,171 @@
 .similarAreaCheckbox input[type="checkbox"]:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+/* bar 알바 제외 스위치 */
+.barExcludeContainer {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgb(232, 232, 232);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.barExcludeSwitch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  margin-left: auto; /* 우측 정렬 */
+}
+
+.switchInput {
+  display: none;
+}
+
+.switchSlider {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  background-color: #ddd;
+  border-radius: 12px;
+  transition: background-color 0.3s;
+}
+
+.switchSlider::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.switchInput:checked + .switchSlider {
+  background-color: rgb(255, 80, 27);
+}
+
+.switchInput:checked + .switchSlider::before {
+  transform: translateX(20px);
+}
+
+.switchText {
+  font-size: 14px;
+  color: rgb(23, 23, 23);
+  font-weight: 400;
+}
+
+/* 검색 결과 영역 */
+.searchResultsContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.searchResultsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px 16px 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.searchResultsTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #171717;
+  margin: 0;
+}
+
+.searchCancelButton {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  transition: background-color 0.2s;
+}
+
+.searchCancelButton:hover {
+  background-color: #f5f5f5;
+}
+
+.searchResultsContent {
+  flex: 1;
+  padding: 0;
+  overflow-y: auto;
+}
+
+.searchResultItem {
+  width: 100%;
+  padding: 16px 20px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  transition: background-color 0.2s;
+}
+
+.searchResultItem:hover {
+  background-color: #f8f8f8;
+}
+
+.searchResultItem:last-child {
+  border-bottom: none;
+}
+
+.searchResultCheckbox {
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.searchResultText {
+  flex: 1;
+  font-size: 14px;
+  color: #171717;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.searchResultText .highlight {
+  color: rgb(255, 80, 27);
+  font-weight: 600;
+}
+
+.searchResultItem i {
+  color: #999;
+  font-size: 12px;
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+
+.noSearchResults {
+  padding: 40px 20px;
+  text-align: center;
+  color: #666;
+}
+
+.noSearchResults p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.noSearchResults p:first-child {
+  font-weight: 500;
+  color: #171717;
 }

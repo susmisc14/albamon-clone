@@ -59,6 +59,17 @@
   color: inherit;
 }
 
+.icon-special_search_v2::before {
+  content: "";
+  display: inline-block;
+  background-image: url("https://mc.albamon.kr/monimg/msa/assets/images/icons/v2/special/special_search_v2.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+}
+
 .icon-system_close::before {
   content: "×";
   font-size: 24px;
