@@ -2,6 +2,7 @@ import React from "react";
 import { Section } from "../components/Section";
 import { Modal } from "../components/Modal";
 import { Chips } from "../components/Chips";
+import { useModalStore } from "../components/stores/modalStore";
 import areaData from "../../../../data/area.json";
 import styles from "./WorkAreaSection.module.css";
 
@@ -11,6 +12,9 @@ export function WorkAreaSection({ onCountChange }: TProps): React.JSX.Element {
   const [isModalOpen, setIsModalOpen] = React.useState<boolean>(false);
   const [selected, setSelected] = React.useState<Set<string>>(new Set());
   const [selectedArea, setSelectedArea] = React.useState<string>("서울");
+
+  // 모달 스토어에서 상태 가져오기
+  const { setSelectedItems } = useModalStore();
 
   // areaData를 기반으로 시도 옵션 동적 생성
   const areaOptions = React.useMemo(() => {
@@ -59,14 +63,10 @@ export function WorkAreaSection({ onCountChange }: TProps): React.JSX.Element {
     setSelectedArea(area);
   };
 
-  // Modal 확인 시 선택된 지역을 추가하는 핸들러
+  // Modal 확인 시 선택된 지역으로 교체하는 핸들러
   const handleModalConfirm = (selectedAreas: string[]) => {
-    // 선택된 지역들을 selected Set에 추가
-    setSelected((prev) => {
-      const next = new Set(prev);
-      selectedAreas.forEach((area) => next.add(area));
-      return next;
-    });
+    // 선택된 지역들로 selected Set을 교체 (기존 선택 항목들 모두 제거 후 새로 설정)
+    setSelected(new Set(selectedAreas));
   };
 
   function handleAddButtonClick(): void {
@@ -100,10 +100,18 @@ export function WorkAreaSection({ onCountChange }: TProps): React.JSX.Element {
                 key={area}
                 className={styles.selectedAreaChip}
                 onClick={() => {
-                  // chip 클릭 시 선택 해제
+                  // chip 클릭 시 선택 해제 (섹션과 모달 상태 동시 업데이트)
                   setSelected((prev) => {
                     const next = new Set(prev);
                     next.delete(area);
+
+                    // 모달 스토어 상태도 함께 업데이트
+                    // 지역 선택의 경우 selectedItems[1]을 빈 값으로 설정
+                    setSelectedItems({
+                      0: "서울", // 시·도는 항상 서울로 유지
+                      // 1번 인덱스는 삭제하여 선택 해제 상태로 만듦
+                    });
+
                     return next;
                   });
                 }}
